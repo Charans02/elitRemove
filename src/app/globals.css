@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fcfcfc;
+  --foreground: #0e0e0e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-red: #ff0000;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+section {
+  @apply mx-auto w-full max-w-[1512px] px-[20px] py-[40px] md:px-[60px] md:py-[40px] xl:px-[80px] xl:py-[60px];
+}
+
+p {
+  @apply font-[family-name:var(--font-sora-sans)];
+}
+
+.shadow {
+  box-shadow: 18px 15px 35px 0px #00000017;
+}
+
+.btn-shadow {
+  box-shadow: 0px 4px 38px 0px #ffffff40;
+}
+
+.bg-black-gradient {
+  background: linear-gradient(259.45deg, #00000000 2.11%, #000000 74.41%);
+}
+
+.bg-red-gradient {
+  background: linear-gradient(258.53deg, #ff0000 0%, #bf2d2d 99.77%);
+}
+
+.bg-red-gradient-2 {
+  background: linear-gradient(318.58deg, #bf2d2d 1.82%, #ff0000 95.74%);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 40s linear infinite;
+}
+
+.customers-container {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* border-image-source: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 50%,
+    rgba(255, 255, 255, 0) 100%
+  ); */
+  box-shadow: 0px 4.32px 15.13px 0px #00000040;
+}
