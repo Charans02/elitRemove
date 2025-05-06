@@ -1,7 +1,16 @@
-const CircleArrowIcon = () => {
+import React from "react";
+
+interface CircleArrowIconProps {
+  className?: string;
+}
+
+const CircleArrowIcon: React.FC<CircleArrowIconProps> = ({ className }) => {
   return (
     <svg
-      className="h-[11.72px] w-[11.72px] md:h-[16.53px] md:w-[16.53px] xl:h-[29.86px] xl:w-[29.86px]"
+      className={
+        className ||
+        "h-[11.72px] w-[11.72px] md:h-[16.53px] md:w-[16.53px] xl:h-[29.86px] xl:w-[29.86px]"
+      }
       viewBox="0 0 25 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
