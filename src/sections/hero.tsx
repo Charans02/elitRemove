@@ -4,18 +4,18 @@ import { Text } from "@/components/ui";
 
 const Hero = () => {
   return (
-    <div className="text-background bg-[url('/images/bg.png')] bg-cover bg-center">
+    <div className="text-background bg-[url('/images/bg.png')] bg-cover bg-center pt-[80px]">
       <div className="bg-black-gradient">
         <section className="flex flex-col gap-[146px] !pt-20 !pb-[30px] md:flex-row md:gap-[32.01px] md:!pb-[100.95px] lg:!pt-56 xl:justify-between xl:gap-0">
-          <div className="flex max-w-[710px] flex-col items-center gap-4 lg:gap-8 xl:items-start">
-            <Text variant="h1" className="text-center xl:text-left">
+          <div className="flex max-w-[710px] flex-col items-center gap-4 lg:gap-8 xl:items-start lg:items-start md:items-start">
+            <Text variant="h1" className="text-center lg:text-left xl:text-left md:text-left">
               <span className="text-red font-extrabold">
                 Philadelphia&apos;s
               </span>
               <br />
               #1 Top Rated Junk Removal Team
             </Text>
-            <Text className="text-center text-[14px] leading-[23px] lg:text-[16px] xl:text-left xl:text-[21px] xl:leading-[26px]">
+            <Text className="text-center lg:text-left md:text-left text-[14px] leading-[23px] lg:text-[16px] xl:text-left xl:text-[21px] xl:leading-[26px]">
               <span className="font-bold">
                 Proudly serving Philadelphia for 5 years
               </span>
