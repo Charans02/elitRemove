@@ -19,17 +19,17 @@ const Header = () => {
         <div className="mx-auto flex max-w-[1512px] flex-row-reverse items-center justify-between px-[20px] py-3 md:px-[40px] lg:flex-row lg:py-1 2xl:px-[60px]">
           <div className="hidden gap-12 2xl:flex">
             <Link href="#">
-              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all">
+              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all hover:underline">
                 Home
               </p>
             </Link>
             <Link href="#">
-              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all">
+              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all hover:underline">
                 About Us
               </p>
             </Link>
             <Link href="#">
-              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all">
+              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all hover:underline">
                 Our Services
               </p>
             </Link>
