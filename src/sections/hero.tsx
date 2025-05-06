@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="text-background bg-[url('/images/bg.png')] bg-cover bg-center">
       <div className="bg-black-gradient">
-        <section className="flex justify-between !py-56">
+        <section className="flex flex-col md:flex-row gap-[146px] md:gap-[32.01px] xl:gap-0 xl:justify-between !pt-56 !pb-[30px] md:!pb-[100.95px]  ">
           <div className="flex max-w-[710px] flex-col gap-8">
             <Text variant="h1" className="">
               <span className="text-red font-extrabold">
@@ -68,6 +68,7 @@ const Hero = () => {
             alt=""
             width={553}
             height={737}
+            quality={100}
             className="scale-x-[-1] -translate-y-24"
           />
         </section>

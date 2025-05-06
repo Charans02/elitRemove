@@ -9,6 +9,7 @@ import Experts from "./experts";
 import ServiceAreas from "./service-areas";
 import Contact from "./contact";
 import CTA from "./cta";
+import JunkRemovalQuote from "./junk-removal-quote";
 
 export {
   Hero,
@@ -22,4 +23,5 @@ export {
   ServiceAreas,
   Contact,
   CTA,
+  JunkRemovalQuote
 };
