@@ -6,16 +6,16 @@ const textVariants = tv({
   base: "",
   variants: {
     variant: {
-      h1: "font-[family-name:var(--font-sora-sans)] text-[34px] leading-[43px] xl:text-[65px] xl:leading-[78px] font-bold",
-      h2: "font-[family-name:var(--font-sora-sans)] text-[34px] leading-[43px] xl:text-[45px] xl:leading-[60px] font-semibold",
+      h1: "font-[family-name:var(--font-sora-sans)] text-[28px] leading-[43px] md:text-[34px] md:leading-[43px] xl:text-[65px] xl:leading-[78px] font-bold",
+      h2: "font-[family-name:var(--font-sora-sans)] text-[24px] leading-[30px] md:text-[34px] md:leading-[43px] xl:text-[45px] xl:leading-[60px] font-semibold",
       h3: "font-[family-name:var(--font-sora-sans)] text-[54px] leading-[60px] font-semibold",
       h4: "font-[family-name:var(--font-sora-sans)] text-[38px] leading-[48px] font-semibold",
       h5: "text-[20px] lg:text-[30px] leading-[100%] font-normal",
-      h6: "font-[family-name:var(--font-sora-sans)] text-[20px] leading-[28px] font-semibold",
+      h6: "font-[family-name:var(--font-sora-sans)] text-[20px] leading -[28px] font-semibold",
       body1:
-        "font-[family-name:var(--font-sora-sans)] text-[16px] leading-[24px] font-normal",
+        "font-[family-name:var(--font-sora-sans)] text-[14px] md:text-[16px] leading-[24px] font-normal",
       body2:
-        "font-[family-name:var(--font-sora-sans)] text-[18px] leading-[26px] font-normal text-[#525252]",
+        "font-[family-name:var(--font-sora-sans)] text-[14px] md:text-[18px] l eading-[26px] font-normal",
       button:
         "font-[family-name:var(--font-sora-sans)] text-[18px] leading-[28px] font-semibold",
       caption: "text-[12px] lg:text-[14px] leading-[100%] font-normal",

@@ -3,15 +3,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { AlignJustify, MessageCircle, Phone, PhoneCall } from "lucide-react";
+import { AlignJustify, MessageCircle, Phone, PhoneCall, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 
+  const handleClick = () => {
+    setIsMenuOpened(!isMenuOpened);
+    document.documentElement.style.overflow = !isMenuOpened ? "hidden" : "auto";
+  };
+
   return (
     <nav className="fixed top-0 z-50 w-full bg-black/10 text-white backdrop-blur-2xl">
       {!isMenuOpened ? (
-        <div className="mx-auto flex max-w-[1512px] flex-row-reverse items-center justify-between px-[20px] py-1 md:px-[40px] lg:flex-row 2xl:px-[60px]">
+        <div className="mx-auto flex max-w-[1512px] flex-row-reverse items-center justify-between px-[20px] py-3 md:px-[40px] lg:flex-row lg:py-1 2xl:px-[60px]">
           <div className="hidden gap-12 2xl:flex">
             <Link href="#">
               <p className="hover:text-red font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all">
@@ -30,33 +35,33 @@ const Header = () => {
             </Link>
           </div>
           <button
-            className="block cursor-pointer 2xl:hidden"
-            onClick={() => setIsMenuOpened(true)}
+            className="hover:text-red block cursor-pointer transition-colors 2xl:hidden"
+            onClick={handleClick}
           >
-            <AlignJustify size={32} />
+            <AlignJustify className="size-5 lg:size-8" />
           </button>
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Image
               src="/images/logo.png"
               alt=""
               width={134}
               height={122}
-              className="block lg:hidden"
+              className="block h-[34px] w-[38px] lg:hidden lg:h-[69px] lg:w-[77px] 2xl:h-[122px] 2xl:w-[134px]"
             />
-            <p className="font-[family-name:var(--font-sora-sans)] text-[35px] leading-[100%] font-semibold">
-              Trash
+            <p className="font-[family-name:var(--font-sora-sans)] text-[13px] leading-[100%] font-semibold lg:text-[20px] 2xl:text-[35px]">
+              Trash&nbsp;
             </p>
             <Image
               src="/images/logo.png"
               alt=""
               width={134}
               height={122}
-              className="hidden lg:block"
+              className="hidden h-[34px] w-[38px] lg:block lg:h-[69px] lg:w-[77px] 2xl:h-[122px] 2xl:w-[134px]"
             />
-            <p className="font-[family-name:var(--font-sora-sans)] text-[35px] leading-[100%] font-semibold">
+            <p className="font-[family-name:var(--font-sora-sans)] text-[13px] leading-[100%] font-semibold lg:text-[20px] 2xl:text-[35px]">
               Lion
             </p>
-          </div>
+          </Link>
           <div className="hidden items-center gap-8 lg:flex">
             <div className="hidden items-center gap-2.5 2xl:flex">
               <PhoneCall size={30} fill="red" stroke="none" />
@@ -79,7 +84,31 @@ const Header = () => {
           </div>
         </div>
       ) : (
-        <div className="h-screen overflow-hidden"></div>
+        <div className="relative flex h-screen items-center justify-center bg-black">
+          <div className="flex flex-col items-center gap-12">
+            <Link href="#">
+              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all">
+                Home
+              </p>
+            </Link>
+            <Link href="#">
+              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all">
+                About Us
+              </p>
+            </Link>
+            <Link href="#">
+              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all">
+                Our Services
+              </p>
+            </Link>
+          </div>
+          <button
+            className="hover:text-red absolute top-6 right-6 block cursor-pointer transition-colors"
+            onClick={handleClick}
+          >
+            <X className="size-5 lg:size-8" />
+          </button>
+        </div>
       )}
     </nav>
   );

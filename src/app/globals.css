@@ -43,15 +43,6 @@ p {
 .bg-red-gradient-2 {
   background: linear-gradient(318.58deg, #bf2d2d 1.82%, #ff0000 95.74%);
 }
-.custom-junk-shadow {
-  /* Drop Shadow */
-  box-shadow: 
-    2.99px 2.99px 7.47px 0.75px rgba(0, 0, 0, 0.2),
-
-    /* Inner Shadows */
-    inset 0px 4.48px 29.86px 1.49px rgba(0, 0, 0, 0.6),
-    inset 0px -4.48px 29.86px 1.49px rgba(0, 0, 0, 0.6);
-}
 
 @keyframes scroll {
   0% {
@@ -83,4 +74,12 @@ p {
     rgba(255, 255, 255, 0) 100%
   ); */
   box-shadow: 0px 4.32px 15.13px 0px #00000040;
+}
+
+.custom-junk-shadow {
+  /* Drop Shadow */
+  box-shadow:
+    2.99px 2.99px 7.47px 0.75px rgba(0, 0, 0, 0.2),
+    /* Inner Shadows */ inset 0px 4.48px 29.86px 1.49px rgba(0, 0, 0, 0.6),
+    inset 0px -4.48px 29.86px 1.49px rgba(0, 0, 0, 0.6);
 }

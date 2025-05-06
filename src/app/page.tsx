@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="mt-[-101.23px] md:mt-[-71.84px] xl:mt-[-130px]  md:px-[60px] xl:px-0">
-      <JunkRemovalQuote/>
+      <div className="mt-[-101.23px] md:mt-[-71.84px] md:px-[60px] xl:mt-[-130px] xl:px-0">
+        <JunkRemovalQuote />
       </div>
       <Banner />
       <States />

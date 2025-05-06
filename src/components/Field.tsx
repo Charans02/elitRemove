@@ -7,7 +7,7 @@ interface FieldProps {
 
 const Field = ({ fieldName, svg }: FieldProps) => {
   return (
-    <div className="flex gap-[4.1px] md:gap-[5.79px] xl:gap-[10.45px] bg-[#FFFFFF33] backdrop-blur-[8.79px] md:backdrop-blur-[12.4px] xl:backdrop-blur-[22.4px] text-white rounded-[11.72px] md:rounded-[16.53px] xl:rounded-[29.86px] pl-[8.79px] py-[7.85px] md:pl-[12.4px] md:py-[11.07px] xl:py-[20px] xl:pl-[22.4px] w-[97px] md:w-[127.54px] xl:w-[230.43px] border-[0.39px] md:border-[0.55px] xl:border border-white text-[5.28px] md:text-[7.44px] xl:text-[13.44px] font-[600] items-center">
+    <div className="flex w-[97px] items-center gap-[4.1px] rounded-[11.72px] border-[0.39px] border-white bg-[#FFFFFF33] py-[7.85px] pl-[8.79px] text-[5.28px] font-[600] text-white backdrop-blur-[8.79px] md:w-[127.54px] md:gap-[5.79px] md:rounded-[16.53px] md:border-[0.55px] md:py-[11.07px] md:pl-[12.4px] md:text-[7.44px] md:backdrop-blur-[12.4px] xl:w-[230.43px] xl:gap-[10.45px] xl:rounded-[29.86px] xl:border xl:py-[20px] xl:pl-[22.4px] xl:text-[13.44px] xl:backdrop-blur-[22.4px]">
       {svg}
       <span>{fieldName}</span>
     </div>

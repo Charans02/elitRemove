@@ -29,9 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${latoSans.variable} ${soraSans.variable} antialiased`}
-      >
+      <body className={`${latoSans.variable} ${soraSans.variable} antialiased`}>
         <Header />
         <main className="overflow-hidden">{children}</main>
         <Footer />

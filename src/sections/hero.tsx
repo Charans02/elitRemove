@@ -6,16 +6,16 @@ const Hero = () => {
   return (
     <div className="text-background bg-[url('/images/bg.png')] bg-cover bg-center">
       <div className="bg-black-gradient">
-        <section className="flex flex-col md:flex-row gap-[146px] md:gap-[32.01px] xl:gap-0 xl:justify-between !pt-56 !pb-[30px] md:!pb-[100.95px]  ">
-          <div className="flex max-w-[710px] flex-col gap-8">
-            <Text variant="h1" className="">
+        <section className="flex flex-col gap-[146px] !pt-20 !pb-[30px] md:flex-row md:gap-[32.01px] md:!pb-[100.95px] lg:!pt-56 xl:justify-between xl:gap-0">
+          <div className="flex max-w-[710px] flex-col items-center gap-4 lg:gap-8 xl:items-start">
+            <Text variant="h1" className="text-center xl:text-left">
               <span className="text-red font-extrabold">
                 Philadelphia&apos;s
               </span>
               <br />
               #1 Top Rated Junk Removal Team
             </Text>
-            <Text className="text-[21px] leading-[26px]">
+            <Text className="text-center text-[14px] leading-[23px] lg:text-[16px] xl:text-left xl:text-[21px] xl:leading-[26px]">
               <span className="font-bold">
                 Proudly serving Philadelphia for 5 years
               </span>
@@ -24,24 +24,24 @@ const Hero = () => {
               <br />
               We get it done right the first time.
             </Text>
-            <div className="flex items-center gap-5 py-4">
+            <div className="flex items-center gap-2.5 py-4 lg:gap-5">
               <div className="flex items-center gap-2.5">
-                <CalendarRange size={24} />
-                <Text className="text-[17px] leading-[24px] font-semibold">
+                <CalendarRange className="size-3.5 lg:size-4 xl:size-6" />
+                <Text className="text-[9px] leading-[13px] font-semibold lg:text-[11px] lg:leading-[15px] xl:text-[17px] xl:leading-[24px]">
                   10+ Years
                 </Text>
               </div>
-              <div className="bg-background h-9 w-px" />
+              <div className="bg-background h-5 w-px lg:h-9" />
               <div className="flex items-center gap-2.5">
-                <Truck size={24} />
-                <Text className="text-[17px] leading-[24px] font-semibold">
+                <Truck className="size-3.5 lg:size-4 xl:size-6" />
+                <Text className="text-[9px] leading-[13px] font-semibold lg:text-[11px] lg:leading-[15px] xl:text-[17px] xl:leading-[24px]">
                   3 Trash Trucks
                 </Text>
               </div>
-              <div className="bg-background h-9 w-px" />
+              <div className="bg-background h-5 w-px lg:h-9" />
               <div className="flex items-center gap-2.5">
-                <Globe size={24} />
-                <Text className="text-[17px] leading-[24px] font-semibold">
+                <Globe className="size-3.5 lg:size-4 xl:size-6" />
+                <Text className="text-[9px] leading-[13px] font-semibold lg:text-[11px] lg:leading-[15px] xl:text-[17px] xl:leading-[24px]">
                   Serving 6+ Counties
                 </Text>
               </div>
@@ -69,7 +69,7 @@ const Hero = () => {
             width={553}
             height={737}
             quality={100}
-            className="scale-x-[-1] -translate-y-24"
+            className="-translate-y-24 scale-x-[-1]"
           />
         </section>
       </div>
