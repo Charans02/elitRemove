@@ -124,7 +124,7 @@ const Comparison = () => {
                   {comparisonSets.map((item) => (
                     <div
                       key={item.id}
-                      className="embla__slide relative mx-5 flex-[0_0_65%]"
+                      className="embla__slide relative mx-5 flex-[0_0_100%] md:flex-[0_0_65%]"
                     >
                       <div className="before-after-container relative h-[300px] w-full overflow-hidden rounded-[20px] md:h-[400px] lg:h-[500px]">
                         <ReactCompareSlider

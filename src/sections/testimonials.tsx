@@ -42,7 +42,7 @@ const Testimonials = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="bg-black/50 bg-[url(/images/bg.png)] bg-cover bg-center text-white">
+    <div className="bg-black/50 bg-[url(/images/review_bg.png)] bg-cover bg-center text-white">
       <section className="flex flex-col items-center lg:items-start">
         <div className="flex w-full flex-col items-center justify-center xl:flex-row xl:items-end xl:justify-between">
           <div className="space-y-6 text-center lg:text-left">
@@ -83,11 +83,11 @@ const Testimonials = () => {
                 {TESTIMONIALS.map((t, idx) => (
                   <div
                     key={idx}
-                    className="embla__slide relative mx-1 flex-[0_0_55%]"
+                    className="embla__slide relative mx-0 flex-[0_0_100%] md:flex-[0_0_55%]"
                   >
                     <div
                       className={`origin-center transform transition-all duration-500 ease-in-out ${
-                        selectedIndex === idx ? "scale-100" : "scale-80"
+                        selectedIndex === idx ? "scale-100" : "scale-90"
                       }`}
                     >
                       <TestimonialCard t={t} />
@@ -124,12 +124,12 @@ const TestimonialCard = ({ t }: { t: TestimonialType }) => {
   return (
     <div className="relative min-w-[211px] md:min-w-[523px] lg:min-w-[625px]">
       <div className="absolute inset-0 rounded-2xl bg-[#333333] opacity-10"></div>
-      <div className="relative flex h-[200px] w-full flex-col items-center gap-6 overflow-hidden rounded-2xl bg-[#222222]/10 p-6 backdrop-blur-md md:h-[260px] lg:h-[310px]">
+      <div className="relative flex w-full flex-col items-center overflow-hidden rounded-2xl bg-[#222222]/10 p-6 backdrop-blur-md px-[14px] py-[11px] md:px-[24px] md:py-[21px] lg:px-[30px] lg:py-[24px] gap-4">
         <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
         <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
 
-        <div className="flex w-full flex-row items-center justify-between p-3 md:p-5 lg:p-6">
-          <div className="flex flex-row items-center gap-3">
+        <div className="flex w-full md:flex-row items-center justify-between flex-col p-3 md:p-5 lg:p-6">
+          <div className="flex md:flex-row flex-col items-center gap-4 ">
             <div className="relative flex h-[45px] w-[45px] items-center justify-center overflow-hidden rounded-full bg-[#2B6023] text-4xl font-bold text-white md:h-[72px] md:w-[72px]">
               {t.avatar ? (
                 <Image
@@ -146,7 +146,7 @@ const TestimonialCard = ({ t }: { t: TestimonialType }) => {
               {t.name}
             </p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2" >
             {Array(t.rating)
               .fill(null)
               .map((_, index) => (

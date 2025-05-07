@@ -14,7 +14,12 @@ const Story = () => {
       </Text>
       <div className="mt-8 flex w-full max-w-[768px] flex-col items-center gap-8 md:gap-20 xl:max-w-full xl:flex-row xl:gap-30">
         <div className="relative min-h-[493px] w-full max-w-[564px] overflow-hidden rounded-2xl bg-white shadow">
-          <Image src="/images/company_logo.jpg" alt="" fill />
+          <Image
+            src="/images/company_logo.jpg"
+            alt=""
+            fill
+            className="object-cover"
+          />
         </div>
         <div className="flex w-full flex-col items-center gap-8 xl:items-start">
           <p className="text-center font-[family-name:var(--font-sora-sans)] text-[28px] leading-[44px] font-normal uppercase xl:text-left">

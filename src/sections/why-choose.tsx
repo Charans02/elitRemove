@@ -53,7 +53,7 @@ const WhyChoose = () => {
             </Text>
           </button>
         </div>
-        <div className="relative w-full max-w-[536px] overflow-hidden rounded-2xl">
+        <div className="relative w-full overflow-hidden rounded-2xl">
           <div className="relative h-[480px]">
             <Image
               src="/images/trash.png"
@@ -63,7 +63,7 @@ const WhyChoose = () => {
             />
           </div>
           <div className="absolute bottom-[0px] flex h-[80px] w-full items-center justify-center bg-[#d80027]">
-            <p className="font-[family-name:var(--font-lato-sans)] text-[30px] leading-[60px] font-semibold text-white">
+            <p className="font-[family-name:var(--font-lato-sans)] text-[18px] md:text-[30px] md:leading-[60px] font-semibold text-white">
               10+ Years Of Experience
             </p>
           </div>

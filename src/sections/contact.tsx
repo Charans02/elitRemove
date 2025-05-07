@@ -27,7 +27,7 @@ const Contact = () => {
   return (
     <div className="bg-[#f3f3f3]">
       <section className="flex flex-col items-center gap-8 xl:flex-row xl:gap-40">
-        <div className="flex-1 w-full max-w-[601px] ">
+        <div className="flex-1 w-full z-1">
           <Text variant="h2" className="text-center xl:text-left">
             Want to Hire The Best In {
               window.innerWidth > 400 && window.innerWidth < 900 && (
@@ -47,7 +47,7 @@ const Contact = () => {
             <Map posix={[39.9526, -75.1652]} markers={markers} />
           </div>
         </div>
-        <div className="flex flex-1 flex-col items-center gap-4 rounded-2xl w-full max-w-[601px] bg-white p-8 shadow">
+        <div className="flex flex-1 flex-col items-center gap-4 rounded-2xl w-full bg-white p-8 shadow">
           <p className="text-red mb-8 text-center font-[family-name:var(--font-sora-sans)] text-[40px] leading-[40px] font-semibold xl:text-left">
             Reach out to Trash Lion!
           </p>
