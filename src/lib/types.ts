@@ -10,3 +10,9 @@ export type TestimonialType = {
   content: string;
   rating: number; // 0-5 scale
 };
+
+export type ExpertType = {
+  id: number;
+  img_url: string;
+  img_name: string;
+};
