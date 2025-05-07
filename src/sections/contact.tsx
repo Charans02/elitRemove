@@ -26,7 +26,7 @@ const Contact = () => {
 
   return (
     <div className="bg-[#f3f3f3]">
-      <section className="flex flex-col gap-8 xl:flex-row xl:gap-40">
+      <section className="flex flex-col items-center gap-8 xl:flex-row xl:gap-40">
         <div className="flex-1">
           <Text variant="h2" className="text-center xl:text-left">
             Want to Hire The Best In Philadelphia
