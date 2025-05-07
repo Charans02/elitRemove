@@ -77,7 +77,7 @@ const Comparison = () => {
   return (
     <div className="bg-[url('/images/bg.png')] bg-cover bg-center">
       <div className="bg-black/60">
-        <section className="!px-0">
+        <section>
           <div className="flex flex-col items-center justify-between px-[20px] md:px-[35px] lg:flex-row lg:items-end lg:px-[60px]">
             <div className="flex flex-col">
               <Text
@@ -124,7 +124,7 @@ const Comparison = () => {
                   {comparisonSets.map((item) => (
                     <div
                       key={item.id}
-                      className="embla__slide relative mx-[5%] flex-[0_0_65%]"
+                      className="embla__slide relative mx-5 flex-[0_0_65%]"
                     >
                       <div className="before-after-container relative h-[300px] w-full overflow-hidden rounded-[20px] md:h-[400px] lg:h-[500px]">
                         <ReactCompareSlider
