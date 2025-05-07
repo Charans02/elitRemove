@@ -29,7 +29,12 @@ const Contact = () => {
       <section className="flex flex-col items-center gap-8 xl:flex-row xl:gap-40">
         <div className="flex-1">
           <Text variant="h2" className="text-center xl:text-left">
-            Want to Hire The Best In Philadelphia
+            Want to Hire The Best In {
+              window.innerWidth > 900 && (
+                <br />
+              )
+            } Philadelphia
+            
             <span className="text-red"> Call Trash Lion</span>
           </Text>
           {/* <Image
@@ -39,11 +44,11 @@ const Contact = () => {
             height={349}
             className="border-red mt-8 w-full rounded-md border shadow sm:rounded-lg xl:rounded-xl"
           /> */}
-          <div className="border-red mt-8 h-[349px] w-full max-w-[601px] overflow-hidden rounded-md border shadow sm:rounded-lg xl:rounded-xl">
+          <div className="border-red mt-8 h-[349px] w-full max-w-[601px] overflow-hidden mx-auto rounded-md border shadow sm:rounded-lg xl:rounded-xl">
             <Map posix={[39.9526, -75.1652]} markers={markers} />
           </div>
         </div>
-        <div className="flex flex-1 flex-col items-center gap-4 rounded-2xl bg-white p-8 shadow">
+        <div className="flex flex-1 flex-col items-center gap-4 rounded-2xl w-full max-w-[601px] bg-white p-8 shadow">
           <p className="text-red mb-8 text-center font-[family-name:var(--font-sora-sans)] text-[40px] leading-[40px] font-semibold xl:text-left">
             Reach out to Trash Lion!
           </p>
