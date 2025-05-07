@@ -12,6 +12,7 @@ const Testimonials = () => {
     loop: true,
     containScroll: false,
     dragFree: true,
+    
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -82,7 +83,7 @@ const Testimonials = () => {
                 {TESTIMONIALS.map((t, idx) => (
                   <div
                     key={idx}
-                    className="embla__slide relative mx-[5%] flex-[0_0_55%]"
+                    className="embla__slide relative mx-1 flex-[0_0_55%]"
                   >
                     <div
                       className={`origin-center transform transition-all duration-500 ease-in-out ${
@@ -129,7 +130,7 @@ const TestimonialCard = ({ t }: { t: TestimonialType }) => {
 
         <div className="flex w-full flex-row items-center justify-between p-3 md:p-5 lg:p-6">
           <div className="flex flex-row items-center gap-3">
-            <div className="relative flex h-[45px] w-[45px] md:h-[72px] md:w-[72px] items-center justify-center overflow-hidden rounded-full bg-[#2B6023] text-4xl font-bold text-white">
+            <div className="relative flex h-[45px] w-[45px] items-center justify-center overflow-hidden rounded-full bg-[#2B6023] text-4xl font-bold text-white md:h-[72px] md:w-[72px]">
               {t.avatar ? (
                 <Image
                   src={t.avatar}
