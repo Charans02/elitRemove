@@ -4,9 +4,9 @@ import { Text } from "@/components/ui";
 
 const Hero = () => {
   return (
-    <div className="text-background bg-[url('/images/bg.png')] bg-cover bg-center pt-[58px] lg:pt-[72px] 2xl:pt-[100px]">
+    <div className="text-background bg-[url('/images/bg.png')] bg-cover bg-center pt-[58px] md:pt-[92px] xl:pt-[130px]">
       <div className="bg-black-gradient">
-        <section className="flex flex-col gap-5 !pt-[20px] !pb-[100px] md:flex-row md:gap-[32.01px] md:!pt-[30px]  xl:justify-between xl:gap-0 2xl:!pt-[60px] xl:!pb-20 lg:!pb-10 md:!pb-10">
+        <section className="flex flex-col gap-5 !pt-[20px] !pb-[100px] md:relative md:flex-row md:gap-[32.01px] md:!pt-[35px] xl:justify-between xl:gap-0 xl:!pb-[200px] 2xl:!pt-[60px]">
           <div className="flex h-fit max-w-[710px] flex-col items-center gap-4 md:items-start lg:items-start lg:gap-6 xl:items-start">
             <Text
               variant="h1"
@@ -16,7 +16,7 @@ const Hero = () => {
                 Philadelphia&apos;s
               </span>
               <br />
-              #1 Top Rated Junk Removal Team
+              #1 Top Rated Junk <br /> Removal Team
             </Text>
             <Text className="text-center text-[14px] leading-[23px] md:text-left md:text-[16px] lg:text-left lg:text-[21px] lg:leading-[26px] xl:text-left">
               <span className="font-bold">
@@ -73,7 +73,7 @@ const Hero = () => {
             width={553}
             height={737}
             quality={100}
-            className="mx-auto w-full max-w-[280px] translate-y-4 scale-x-[-1] object-contain md:max-w-[340px] md:translate-y-0 lg:max-w-[400px] lg:translate-y-0 xl:max-w-[500px]"
+            className="static mx-auto w-full max-w-[280px] translate-y-4 scale-x-[-1] object-contain md:absolute md:top-[-10px] md:right-1/10 md:max-w-[340px] md:translate-y-0 lg:top-[-20px] lg:max-w-[400px] lg:translate-y-0 xl:top-[-30px] xl:max-w-[500px]"
             priority
           />
         </section>
