@@ -27,14 +27,13 @@ const Contact = () => {
   return (
     <div className="bg-[#f3f3f3]">
       <section className="flex flex-col items-center gap-8 xl:flex-row xl:gap-40">
-        <div className="flex-1">
+        <div className="flex-1 w-full max-w-[601px] ">
           <Text variant="h2" className="text-center xl:text-left">
             Want to Hire The Best In {
-              window.innerWidth > 900 && (
+              window.innerWidth > 400 && window.innerWidth < 900 && (
                 <br />
               )
             } Philadelphia
-            
             <span className="text-red"> Call Trash Lion</span>
           </Text>
           {/* <Image
@@ -44,7 +43,7 @@ const Contact = () => {
             height={349}
             className="border-red mt-8 w-full rounded-md border shadow sm:rounded-lg xl:rounded-xl"
           /> */}
-          <div className="border-red mt-8 h-[349px] w-full max-w-[601px] overflow-hidden mx-auto rounded-md border shadow sm:rounded-lg xl:rounded-xl">
+          <div className="border-red mt-8 h-[349px] overflow-hidden mx-auto rounded-md border shadow sm:rounded-lg xl:rounded-xl">
             <Map posix={[39.9526, -75.1652]} markers={markers} />
           </div>
         </div>
