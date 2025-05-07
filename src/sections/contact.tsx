@@ -1,12 +1,32 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { LatLngTuple } from "leaflet";
 import { CircleChevronRight } from "lucide-react";
 import { Text } from "@/components/ui";
 
 const Contact = () => {
+  const [isMediumScreen, setIsMediumScreen] = useState(false);
+
+  // Handle window resize on client side only
+  useEffect(() => {
+    const checkScreenSize = () => {
+      if (typeof window !== "undefined") {
+        setIsMediumScreen(window.innerWidth > 400 && window.innerWidth < 900);
+      }
+    };
+
+    // Check on initial render
+    checkScreenSize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", checkScreenSize);
+
+    // Clean up event listener
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   const Map = useMemo(
     () =>
       dynamic(() => import("@/components/map"), {
@@ -27,13 +47,9 @@ const Contact = () => {
   return (
     <div className="bg-[#f3f3f3]">
       <section className="flex flex-col items-center gap-8 xl:flex-row xl:gap-40">
-        <div className="flex-1 w-full z-1">
+        <div className="z-1 w-full flex-1">
           <Text variant="h2" className="text-center xl:text-left">
-            Want to Hire The Best In {
-              window.innerWidth > 400 && window.innerWidth < 900 && (
-                <br />
-              )
-            } Philadelphia
+            Want to Hire The Best In {isMediumScreen && <br />} Philadelphia
             <span className="text-red"> Call Trash Lion</span>
           </Text>
           {/* <Image
@@ -43,11 +59,11 @@ const Contact = () => {
             height={349}
             className="border-red mt-8 w-full rounded-md border shadow sm:rounded-lg xl:rounded-xl"
           /> */}
-          <div className="border-red mt-8 h-[349px] overflow-hidden mx-auto rounded-md border shadow sm:rounded-lg xl:rounded-xl">
+          <div className="border-red mx-auto mt-8 h-[349px] overflow-hidden rounded-md border shadow sm:rounded-lg xl:rounded-xl">
             <Map posix={[39.9526, -75.1652]} markers={markers} />
           </div>
         </div>
-        <div className="flex flex-1 flex-col items-center gap-4 rounded-2xl w-full bg-white p-8 shadow">
+        <div className="flex w-full flex-1 flex-col items-center gap-4 rounded-2xl bg-white p-8 shadow">
           <p className="text-red mb-8 text-center font-[family-name:var(--font-sora-sans)] text-[40px] leading-[40px] font-semibold xl:text-left">
             Reach out to Trash Lion!
           </p>

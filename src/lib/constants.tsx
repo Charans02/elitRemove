@@ -7,7 +7,7 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
-import { ServiceType, TestimonialType, ExpertType } from "./types";
+import { ServiceType, TestimonialType, Expert } from "./types";
 
 export const CONTACT_INFO = [
   {
@@ -138,30 +138,95 @@ export const SERVICE_AREAS = [
   "Southampton, Upper Southampton Township",
 ];
 
-export const EXPERT_IMAGES: ExpertType[] = [
+export const EXPERT_IMAGES: Expert[] = [
   {
     id: 1,
-    img_url: "/images/image.png",
-    img_name: "Expert 1",
+    img_group: [
+      {
+        id: 1,
+        img_url: "/images/image.png",
+        img_name: "Expert 1",
+      },
+      {
+        id: 2,
+        img_url: "/images/image_1.jpg",
+        img_name: "Expert 2",
+      },
+      {
+        id: 3,
+        img_url: "/images/image_2.jpg",
+        img_name: "Expert 3",
+      },
+      {
+        id: 4,
+        img_url: "/images/image_3.jpg",
+        img_name: "Expert 4",
+      },
+      {
+        id: 5,
+        img_url: "/images/image_4.jpg",
+        img_name: "Expert 5",
+      },
+    ],
   },
   {
     id: 2,
-    img_url: "/images/image_1.jpg",
-    img_name: "Expert 2",
+    img_group: [
+      {
+        id: 1,
+        img_url: "/images/image.png",
+        img_name: "Expert 1",
+      },
+      {
+        id: 2,
+        img_url: "/images/image_1.jpg",
+        img_name: "Expert 2",
+      },
+      {
+        id: 3,
+        img_url: "/images/image_2.jpg",
+        img_name: "Expert 3",
+      },
+      {
+        id: 4,
+        img_url: "/images/image_3.jpg",
+        img_name: "Expert 4",
+      },
+      {
+        id: 5,
+        img_url: "/images/image_4.jpg",
+        img_name: "Expert 5",
+      },
+    ],
   },
   {
     id: 3,
-    img_url: "/images/image_2.jpg",
-    img_name: "Expert 3",
-  },
-  {
-    id: 4,
-    img_url: "/images/image_3.jpg",
-    img_name: "Expert 4",
-  },
-  {
-    id: 5,
-    img_url: "/images/image_4.jpg",
-    img_name: "Expert 5",
+    img_group: [
+      {
+        id: 1,
+        img_url: "/images/image.png",
+        img_name: "Expert 1",
+      },
+      {
+        id: 2,
+        img_url: "/images/image_1.jpg",
+        img_name: "Expert 2",
+      },
+      {
+        id: 3,
+        img_url: "/images/image_2.jpg",
+        img_name: "Expert 3",
+      },
+      {
+        id: 4,
+        img_url: "/images/image_3.jpg",
+        img_name: "Expert 4",
+      },
+      {
+        id: 5,
+        img_url: "/images/image_4.jpg",
+        img_name: "Expert 5",
+      },
+    ],
   },
 ];

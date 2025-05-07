@@ -1,48 +1,29 @@
 "use client";
 import Image from "next/image";
 import { Text } from "@/components/ui";
-import { useEffect, useState, useCallback } from "react";
+import { EXPERT_IMAGES } from "@/lib/constants";
+import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const EXPERT_IMAGES = [
-  "/images/image.png",
-  "/images/image_1.jpg",
-  "/images/image_2.jpg",
-  "/images/image_3.jpg",
-  "/images/image_4.jpg",
-  "/images/image_5.jpg",
-  // "/images/image_6.png",
-  // "/images/image_7.png",
-  // "/images/image_8.png",
-  // "/images/image_9.png",
-];
 
 const Experts = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    containScroll: false,
-  });
+  const [emblaRef, embla] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
+
+  const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
+  const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
+
   const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
+    if (!embla) return;
+    setSelectedIndex(embla.selectedScrollSnap());
+  }, [embla]);
 
   useEffect(() => {
-    if (!emblaApi) return;
-    emblaApi.on("select", onSelect);
-    onSelect();
+    if (!embla) return;
+    embla.on("select", onSelect);
     return () => {
-      emblaApi.off("select", onSelect);
+      embla.off("select", onSelect);
     };
-  }, [emblaApi]);
+  }, [embla, onSelect]);
 
   return (
     <div className="text-background bg-[url('/images/bg.png')] bg-cover bg-center opacity-90">
@@ -65,69 +46,126 @@ const Experts = () => {
               Lion will get your area looking right.
             </p>
           </div>
-          <div className="mt-16 space-y-8">
-            <div className="flex flex-col items-center gap-8 xl:flex-row">
-              <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
-                <Image
-                  src="/images/image.png"
-                  alt=""
-                  fill
-                  className="object-cover object-center"
-                />
-              </div>
-              <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
-                <Image
-                  src="/images/image.png"
-                  alt=""
-                  fill
-                  className="object-cover object-center"
-                />
-              </div>
-            </div>
-            <div className="carousel-container relative">
-              <div className="embla overflow-hidden" ref={emblaRef}>
-                <div className="embla__container flex">
-                  {EXPERT_IMAGES.map((image, index) => (
-                    <div
-                      key={index}
-                      className="embla__slide relative mx-4 aspect-video min-h-[200px] w-full max-w-[768px] flex-[0_0_100%] overflow-hidden rounded-lg lg:flex-[0_0_33.3333%]"
-                    >
-                      <Image
-                        src={image}
-                        alt={"Expert at work " + (index + 1)}
-                        fill
-                        className="object-cover object-center"
-                      />
+
+          <div className="relative mt-16">
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex">
+                {EXPERT_IMAGES.map((group) => (
+                  <div
+                    key={group.id}
+                    className="min-w-full flex-none space-y-8"
+                  >
+                    {/* First row with 2 images */}
+                    <div className="flex flex-col items-center gap-8 xl:flex-row">
+                      <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
+                        <Image
+                          src={
+                            group.img_group[0]?.img_url || "/images/image.png"
+                          }
+                          alt={group.img_group[0]?.img_name || ""}
+                          fill
+                          className="object-cover object-center"
+                        />
+                      </div>
+                      <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
+                        <Image
+                          src={
+                            group.img_group[1]?.img_url || "/images/image.png"
+                          }
+                          alt={group.img_group[1]?.img_name || ""}
+                          fill
+                          className="object-cover object-center"
+                        />
+                      </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            {/* Carousel navigation */}
-            <div className="mt-4 flex items-center justify-center gap-4">
-              <button
-                onClick={scrollPrev}
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-2xl text-white lg:h-[45px] lg:w-[45px]"
-                aria-label="Previous slide"
-              >
-                <ChevronLeft size={20} />
-              </button>
-              <div className="flex gap-2">
-                {EXPERT_IMAGES.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => emblaApi && emblaApi.scrollTo(idx)}
-                    className={`h-[4px] w-[4px] rounded-full border border-white lg:h-[8px] lg:w-[8px] ${selectedIndex === idx ? "bg-black" : "bg-white"}`}
-                    aria-label={`Go to slide ${idx + 1}`}
-                  />
+
+                    {/* Second row with 3 images */}
+                    <div className="flex flex-col items-center gap-8 xl:flex-row">
+                      <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
+                        <Image
+                          src={
+                            group.img_group[2]?.img_url || "/images/image.png"
+                          }
+                          alt={group.img_group[2]?.img_name || ""}
+                          fill
+                          className="object-cover object-center"
+                        />
+                      </div>
+                      <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
+                        <Image
+                          src={
+                            group.img_group[3]?.img_url || "/images/image.png"
+                          }
+                          alt={group.img_group[3]?.img_name || ""}
+                          fill
+                          className="object-cover object-center"
+                        />
+                      </div>
+                      <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
+                        <Image
+                          src={
+                            group.img_group[4]?.img_url || "/images/image.png"
+                          }
+                          alt={group.img_group[4]?.img_name || ""}
+                          fill
+                          className="object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
+            </div>
+
+            <div className="mt-4 flex items-center justify-center gap-2">
+              <button
+                onClick={scrollPrev}
+                className="rounded-full bg-white/20 p-2 text-white"
+                aria-label="Previous slide"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              {EXPERT_IMAGES.map((_, index) => (
+                <button
+                  key={index}
+                  className={`h-2 w-2 rounded-full transition-all ${
+                    selectedIndex === index ? "bg-red w-6" : "bg-white/70"
+                  }`}
+                  onClick={() => embla?.scrollTo(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+
               <button
                 onClick={scrollNext}
-                className="text flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-2xl lg:h-[45px] lg:w-[45px]"
+                className="rounded-full bg-white/20 p-2 text-white"
                 aria-label="Next slide"
               >
-                <ChevronRight size={20} />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
               </button>
             </div>
           </div>

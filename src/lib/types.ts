@@ -11,8 +11,14 @@ export type TestimonialType = {
   rating: number; // 0-5 scale
 };
 
-export type ExpertType = {
+type ExpertType = {
   id: number;
   img_url: string;
   img_name: string;
 };
+
+export interface Expert {
+  id: number;
+  img_group: ExpertType[];
+}
+

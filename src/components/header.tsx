@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <nav className="fixed top-0 z-50 w-full bg-black/10 text-white backdrop-blur-2xl">
       {!isMenuOpened ? (
-        <div className="mx-auto flex max-w-[1512px] flex-row-reverse items-center justify-between px-[20px] py-3 md:flex-row md:px-[35px] lg:flex-row lg:py-1 2xl:grid 2xl:grid-cols-3 2xl:items-center 2xl:px-[60px] lg:h-[92px] xl:h-fit gap-1.5">
+        <div className="mx-auto flex max-w-[1512px] flex-row-reverse items-center justify-between px-[20px] py-3 md:flex-row md:px-[35px] lg:px-[60px] lg:flex-row lg:py-1 2xl:grid 2xl:grid-cols-3 2xl:items-center 2xl:px-[60px] lg:h-[92px] xl:h-fit gap-1.5">
           <div className="hidden gap-12 xl:flex 2xl:justify-self-start ">
             <Link href="#">
               <p className="hover:text-red font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-normal transition-all hover:underline">
