@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-black/10 text-white backdrop-blur-2xl">
+    <nav className="fixed top-0 z-50 w-full bg-black/10 text-white backdrop-blur-2xl ">
       {!isMenuOpened ? (
         <div className="mx-auto flex max-w-[1512px] flex-row-reverse items-center justify-between px-[20px] py-3 md:px-[40px] lg:flex-row lg:py-1 2xl:px-[60px]">
           <div className="hidden gap-12 2xl:flex">
