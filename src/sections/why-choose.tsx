@@ -15,7 +15,7 @@ const WhyChoose = () => {
           </Text>
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
             <div className="flex items-center gap-6">
-              <div className="flex size-12 items-center justify-center rounded-2xl bg-[#2da884]">
+              <div className="flex size-12 items-center justify-center rounded-xl p-2 bg-[#2da884]">
                 <Check size={32} stroke="white" />
               </div>
               <p className="font-[family-name:var(--font-lato-sans)] text-[22px] leading-[32px] font-semibold">
@@ -23,7 +23,7 @@ const WhyChoose = () => {
               </p>
             </div>
             <div className="flex items-center gap-6">
-              <div className="flex size-12 items-center justify-center rounded-2xl bg-[#2da884]">
+              <div className="flex size-12 items-center justify-center rounded-xl p-2 bg-[#2da884]">
                 <Check size={32} stroke="white" />
               </div>
               <p className="font-[family-name:var(--font-lato-sans)] text-[22px] leading-[32px] font-semibold">
@@ -31,7 +31,7 @@ const WhyChoose = () => {
               </p>
             </div>
             <div className="flex items-center gap-6">
-              <div className="flex size-12 items-center justify-center rounded-2xl bg-[#2da884]">
+              <div className="flex size-12 items-center justify-center rounded-xl p-2 bg-[#2da884]">
                 <Check size={32} stroke="white" />
               </div>
               <p className="font-[family-name:var(--font-lato-sans)] text-[22px] leading-[32px] font-semibold">
@@ -39,7 +39,7 @@ const WhyChoose = () => {
               </p>
             </div>
             <div className="flex items-center gap-6">
-              <div className="flex size-12 items-center justify-center rounded-2xl bg-[#2da884]">
+              <div className="flex size-12 items-center justify-center rounded-xl p-2 bg-[#2da884]">
                 <Check size={32} stroke="white" />
               </div>
               <p className="font-[family-name:var(--font-lato-sans)] text-[22px] leading-[32px] font-semibold">
