@@ -22,3 +22,10 @@ export interface Expert {
   img_group: ExpertType[];
 }
 
+export interface ComparisonSet {
+  id: number;
+  before: string;
+  after: string;
+  title: string;
+}
+

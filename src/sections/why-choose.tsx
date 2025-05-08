@@ -62,7 +62,7 @@ const WhyChoose = () => {
               className="object-cover"
             />
           </div>
-          <div className="absolute bottom-[0px] flex h-[80px] w-full items-center justify-center bg-[#d80027]">
+          <div className="absolute bottom-[0px] flex h-[80px] w-full items-center justify-center bg-red">
             <p className="font-[family-name:var(--font-lato-sans)] text-[18px] md:text-[30px] md:leading-[60px] font-semibold text-white">
               10+ Years Of Experience
             </p>

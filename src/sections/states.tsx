@@ -13,7 +13,7 @@ const States = () => {
   return (
     <div className="bg-[#f3f3f3]">
       <section className="flex flex-col items-center gap-8 px-[80px] py-[60px] xl:flex-row xl:gap-40">
-        <div className="flex w-full max-w-[768px] flex-col items-center xl:max-w-full xl:items-start">
+        <div className="flex w-full flex-col items-center xl:max-w-full xl:items-start">
           <Text
             variant="h2"
             className="max-w-[467px] text-center md:max-w-full xl:text-left"
@@ -43,7 +43,7 @@ const States = () => {
             ))}
           </div>
         </div>
-        <div className="relative aspect-[6/7] w-full max-w-[768px] overflow-hidden rounded-2xl xl:max-w-full">
+        <div className="relative aspect-[6/7] w-full overflow-hidden rounded-2xl xl:max-w-full">
           <Image
             src="/images/truck.png"
             alt=""

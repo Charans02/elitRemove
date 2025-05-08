@@ -1,11 +1,17 @@
 "use client";
 import Image from "next/image";
 import { Text } from "@/components/ui";
+// Import EXPERT_IMAGES for the static grid
 import { EXPERT_IMAGES } from "@/lib/constants";
+// Commented out imports that will be used later with the carousel
+/*
 import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+*/
 
 const Experts = () => {
+  // Commented carousel functionality - will be used later
+  /*
   const [emblaRef, embla] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -24,6 +30,7 @@ const Experts = () => {
       embla.off("select", onSelect);
     };
   }, [embla, onSelect]);
+  */
 
   return (
     <div className="text-background bg-[url('/images/bg.png')] bg-cover bg-center opacity-90">
@@ -47,6 +54,74 @@ const Experts = () => {
             </p>
           </div>
 
+          {/* Static image grid */}
+          <div className="mt-16 space-y-8">
+            {/* First row with 2 images */}
+            <div className="flex flex-col items-center gap-8 xl:flex-row">
+              <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
+                <Image
+                  src={
+                    EXPERT_IMAGES[0].img_group[0]?.img_url ||
+                    "/images/image.png"
+                  }
+                  alt={EXPERT_IMAGES[0].img_group[0]?.img_name || ""}
+                  fill
+                  className="object-cover object-center"
+                />
+              </div>
+              <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
+                <Image
+                  src={
+                    EXPERT_IMAGES[0].img_group[1]?.img_url ||
+                    "/images/image.png"
+                  }
+                  alt={EXPERT_IMAGES[0].img_group[1]?.img_name || ""}
+                  fill
+                  className="object-cover object-center"
+                />
+              </div>
+            </div>
+
+            {/* Second row with 3 images */}
+            <div className="flex flex-col items-center gap-8 xl:flex-row">
+              <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
+                <Image
+                  src={
+                    EXPERT_IMAGES[0].img_group[2]?.img_url ||
+                    "/images/image.png"
+                  }
+                  alt={EXPERT_IMAGES[0].img_group[2]?.img_name || ""}
+                  fill
+                  className="object-cover object-center"
+                />
+              </div>
+              <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
+                <Image
+                  src={
+                    EXPERT_IMAGES[0].img_group[3]?.img_url ||
+                    "/images/image.png"
+                  }
+                  alt={EXPERT_IMAGES[0].img_group[3]?.img_name || ""}
+                  fill
+                  className="object-cover object-center"
+                />
+              </div>
+              <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
+                <Image
+                  src={
+                    EXPERT_IMAGES[0].img_group[4]?.img_url ||
+                    "/images/image.png"
+                  }
+                  alt={EXPERT_IMAGES[0].img_group[4]?.img_name || ""}
+                  fill
+                  className="object-cover object-center"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Commented carousel implementation - will be used later */}
+          {/*
           <div className="relative mt-16">
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex">
@@ -55,7 +130,6 @@ const Experts = () => {
                     key={group.id}
                     className="min-w-full flex-none space-y-8"
                   >
-                    {/* First row with 2 images */}
                     <div className="flex flex-col items-center gap-8 xl:flex-row">
                       <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
                         <Image
@@ -79,7 +153,6 @@ const Experts = () => {
                       </div>
                     </div>
 
-                    {/* Second row with 3 images */}
                     <div className="flex flex-col items-center gap-8 xl:flex-row">
                       <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
                         <Image
@@ -169,6 +242,7 @@ const Experts = () => {
               </button>
             </div>
           </div>
+          */}
         </section>
       </div>
     </div>

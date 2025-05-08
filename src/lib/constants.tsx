@@ -7,7 +7,7 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
-import { ServiceType, TestimonialType, Expert } from "./types";
+import { ServiceType, TestimonialType, Expert, ComparisonSet } from "./types";
 
 export const CONTACT_INFO = [
   {
@@ -228,5 +228,26 @@ export const EXPERT_IMAGES: Expert[] = [
         img_name: "Expert 5",
       },
     ],
+  },
+];
+
+export const COMPARISON_SETS: ComparisonSet[] = [
+  {
+    id: 1,
+    before: "/images/before.jpg",
+    after: "/images/after.jpg",
+    title: "Backyard Cleanup",
+  },
+  {
+    id: 2,
+    before: "/images/before.jpg",
+    after: "/images/after.jpg",
+    title: "Garage Cleanup",
+  },
+  {
+    id: 3,
+    before: "/images/before.jpg",
+    after: "/images/after.jpg",
+    title: "Home Cleanout",
   },
 ];

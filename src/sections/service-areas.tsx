@@ -27,7 +27,7 @@ const ServiceAreas = () => {
                 <MapPinCheckInside size={28} stroke="white" fill="red" />
                 <Text
                   variant="body2"
-                  className="text-foreground max-w-full md:max-w-[360px] xl:max-w-[212px]"
+                  className="text-foreground max-w-full text-[16px] md:text-[20px] md:max-w-[360px] xl:max-w-[212px]"
                 >
                   {area}, PA
                 </Text>
@@ -40,7 +40,7 @@ const ServiceAreas = () => {
           alt=""
           width={553}
           height={737}
-          className="scale-x-[-1] h-fit"
+          className="scale-x-[1] h-fit"
         />
       </div>
     </section>

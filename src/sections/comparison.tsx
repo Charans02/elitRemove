@@ -1,34 +1,10 @@
 "use client";
-import {
-  ReactCompareSlider,
-  ReactCompareSliderImage,
-  ReactCompareSliderHandle,
-} from "react-compare-slider";
-import { Text } from "@/components/ui";
 import { useState, useEffect, useCallback } from "react";
+import { Text } from "@/components/ui";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
-
-const comparisonSets = [
-  {
-    id: 1,
-    before: "/images/before.jpg",
-    after: "/images/after.jpg",
-    title: "Backyard Cleanup",
-  },
-  {
-    id: 2,
-    before: "/images/before.jpg",
-    after: "/images/after.jpg",
-    title: "Garage Cleanup",
-  },
-  {
-    id: 3,
-    before: "/images/before.jpg",
-    after: "/images/after.jpg",
-    title: "Home Cleanout",
-  },
-];
+import Image from "next/image";
+import { COMPARISON_SETS } from "@/lib/constants";
 
 const Comparison = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -38,18 +14,6 @@ const Comparison = () => {
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [lineWidth, setLineWidth] = useState("4px");
-
-  // Handle responsive line width
-  useEffect(() => {
-    const handleResize = () => {
-      setLineWidth(window.innerWidth >= 1024 ? "12px" : "4px");
-    };
-
-    handleResize(); // Set initial value
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -121,51 +85,37 @@ const Comparison = () => {
             <div className="carousel-container relative">
               <div className="embla overflow-hidden" ref={emblaRef}>
                 <div className="embla__container flex">
-                  {comparisonSets.map((item) => (
+                  {COMPARISON_SETS.map((item) => (
                     <div
                       key={item.id}
                       className="embla__slide relative mx-5 flex-[0_0_100%] md:flex-[0_0_65%]"
                     >
-                      <div className="before-after-container relative h-[300px] w-full overflow-hidden rounded-[20px] md:h-[400px] lg:h-[500px]">
-                        <ReactCompareSlider
-                          className="h-full w-full"
-                          position={50}
-                          handle={
-                            <ReactCompareSliderHandle
-                              buttonStyle={{
-                                backgroundColor: "red",
-                              }}
-                              linesStyle={{
-                                width: lineWidth,
-                                background: "red",
-                              }}
-                            />
-                          }
-                          itemOne={
-                            <div className="relative h-full w-full">
-                              <ReactCompareSliderImage
-                                alt="Before"
-                                src={item.before}
-                                style={{ height: "100%", objectFit: "cover" }}
-                              />
-                              <div className="absolute top-4 left-4 rounded-full bg-black px-3 py-1 text-sm text-white">
-                                Before
-                              </div>
-                            </div>
-                          }
-                          itemTwo={
-                            <div className="relative h-full w-full">
-                              <ReactCompareSliderImage
-                                alt="After"
-                                src={item.after}
-                                style={{ height: "100%", objectFit: "cover" }}
-                              />
-                              <div className="bg-red absolute top-4 right-4 rounded-full px-3 py-1 text-sm text-white">
-                                After
-                              </div>
-                            </div>
-                          }
-                        />
+                      <div className="before-after-container flex h-[600px] w-full flex-col overflow-hidden  md:h-[400px] md:flex-row lg:h-[500px]">
+                        {/* Before Image */}
+                        <div className="relative h-[48%] flex-1 overflow-hidden rounded-bl-[10px] rounded-tl-[10px] md:h-full">
+                          <Image
+                            src={item.before}
+                            alt={`${item.title} Before`}
+                            fill
+                            className="object-cover"
+                          />
+                          <div className="absolute top-4 left-4 z-10 rounded-full bg-black px-3 py-1 text-sm text-white">
+                            Before
+                          </div>
+                        </div>
+
+                        {/* After Image */}
+                        <div className="relative h-[48%] flex-1 overflow-hidden rounded-br-[10px] rounded-tr-[10px] md:h-full">
+                          <Image
+                            src={item.after}
+                            alt={`${item.title} After`}
+                            fill
+                            className="object-cover"
+                          />
+                          <div className="bg-red absolute top-4 right-4 z-10 rounded-full px-3 py-1 text-sm text-white">
+                            After
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -175,7 +125,7 @@ const Comparison = () => {
 
             {/* Slide Indicators */}
             <div className="mt-6 flex justify-center space-x-2">
-              {comparisonSets.map((_, index) => (
+              {COMPARISON_SETS.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => {

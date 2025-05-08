@@ -6,7 +6,7 @@ const textVariants = tv({
   base: "",
   variants: {
     variant: {
-      h1: "font-[family-name:var(--font-sora-sans)] text-[28px] leading-[43px] md:text-[34px] md:leading-[43px] xl:text-[65px] xl:leading-[78px] font-bold",
+      h1: "font-[family-name:var(--font-sora-sans)] text-[28px] leading-[43px] md:text-[34px] md:leading-[43px] xl:text-[55px] xl:leading-[78px] font-bold",
       h2: "font-[family-name:var(--font-sora-sans)] text-[24px] leading-[30px] md:text-[34px] md:leading-[43px] xl:text-[45px] xl:leading-[60px] font-semibold",
       h3: "font-[family-name:var(--font-sora-sans)] text-[54px] leading-[60px] font-semibold",
       h4: "font-[family-name:var(--font-sora-sans)] text-[38px] leading-[48px] font-semibold",

@@ -10,7 +10,7 @@ import {
 const JunkRemovalQuote = () => {
   return (
     <div className="mx-auto min-w-[247.68px] px-[20px] md:px-[35px] lg:max-w-[1392px] lg:px-[60px] xl:px-0">
-      <div className="bg-red-gradient-2 custom-junk-shadow mx-auto rounded-[19.38px] px-[19.84px] pt-[20px] pb-[12px] text-white md:px-[19.84px] md:py-[21.04px] xl:rounded-[35px] xl:px-[35.84px] xl:py-[38px]">
+      <div className="bg-red-gradient-2 mx-auto rounded-[19.38px] px-[19.84px] pt-[20px] pb-[12px] text-white md:px-[19.84px] md:py-[21.04px] xl:rounded-[35px] xl:px-[35.84px] xl:py-[38px]">
         <h2 className="mb-[16.61px] text-center text-[16.6px] font-semibold md:text-[18.6px] xl:mb-[30px] xl:text-[33.6px]">
           Get your <span className="font-[800] underline">Free</span> Junk
           Removal Quote!
@@ -23,9 +23,9 @@ const JunkRemovalQuote = () => {
           <Field svg={<InformationIcon />} fieldName="How Can We Help?" />
 
           {/* Button */}
-          <button className="flex cursor-pointer items-center gap-[3.49px] rounded-[17.47px] bg-[#000000] px-[20.61px] py-[10px] text-[5.59px] leading-[8.08px] font-[700] text-white md:gap-[5.54px] md:rounded-[27.68px] md:px-[32.66px] md:py-[18.82px] md:text-[8.86px] md:leading-[12.81px] xl:gap-[10px] xl:rounded-[50px] xl:px-[59px] xl:py-[34px] xl:text-[16px] xl:leading-[23.14px]">
+          <button className="flex cursor-pointer items-center gap-[3.49px] rounded-[17.47px] bg-[#000000] px-[20.61px] py-[10px] text-[8px] leading-[8.08px] font-[700] text-white md:gap-[5.54px] md:rounded-[27.68px] md:px-[32.66px] md:py-[11.07px] md:text-[10px] md:leading-[12.81px] xl:gap-[10px] xl:rounded-[50px] xl:px-[59px] xl:py-[21px] xl:text-[16px] xl:leading-[23.14px] flex-nowrap">
             <CircleArrowIcon />
-            <span>Get My Junk GONE</span>
+            <span className="text-nowrap">Get My Junk GONE</span>
           </button>
         </div>
       </div>

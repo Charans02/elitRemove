@@ -17,7 +17,7 @@ body {
 }
 
 section {
-  @apply mx-auto w-full max-w-[1512px] px-[20px] py-[40px] md:px-[35px] md:py-[40px] xl:px-[60px] xl:py-[60px];
+  @apply mx-auto w-full max-w-[1512px] px-[20px] py-[40px] md:px-[35px] md:py-[40px] lg:px-[60px] xl:py-[60px];
 }
 
 p {

@@ -50,6 +50,7 @@ const Contact = () => {
         <div className="z-1 w-full flex-1">
           <Text variant="h2" className="text-center xl:text-left">
             Want to Hire The Best In {isMediumScreen && <br />} Philadelphia
+            <br />
             <span className="text-red"> Call Trash Lion</span>
           </Text>
           {/* <Image
@@ -59,7 +60,7 @@ const Contact = () => {
             height={349}
             className="border-red mt-8 w-full rounded-md border shadow sm:rounded-lg xl:rounded-xl"
           /> */}
-          <div className="border-red mx-auto mt-8 h-[349px] overflow-hidden rounded-md border shadow sm:rounded-lg xl:rounded-xl">
+          <div className="border-red mx-auto mt-8 h-[500px] overflow-hidden rounded-md border shadow sm:rounded-lg xl:rounded-xl">
             <Map posix={[39.9526, -75.1652]} markers={markers} />
           </div>
         </div>
