@@ -11,8 +11,7 @@ const Testimonials = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     containScroll: false,
-    dragFree: true,
-    
+    align: "center",
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -31,15 +30,22 @@ const Testimonials = () => {
     setSelectedIndex(newIndex);
   }, [emblaApi]);
 
+  const onSettle = useCallback(() => {
+    if (!emblaApi) return;
+    emblaApi.scrollTo(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
   useEffect(() => {
     if (!emblaApi) return;
     emblaApi.on("select", onSelect);
+    emblaApi.on("settle", onSettle);
     onSelect();
 
     return () => {
       emblaApi.off("select", onSelect);
+      emblaApi.off("settle", onSettle);
     };
-  }, [emblaApi, onSelect]);
+  }, [emblaApi, onSelect, onSettle]);
 
   return (
     <div className="bg-black/50 bg-[url(/images/review_bg.png)] bg-cover bg-center text-white">
@@ -57,7 +63,7 @@ const Testimonials = () => {
             </Text>
           </div>
           <div className="mt-0 flex justify-center md:justify-end lg:mt-6">
-            <div className="flex space-x-6 mt-4">
+            <div className="mt-4 flex space-x-6">
               <button
                 className="bg-red hover:bg-red/80 flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors"
                 onClick={scrollPrev}
@@ -124,12 +130,12 @@ const TestimonialCard = ({ t }: { t: TestimonialType }) => {
   return (
     <div className="relative min-w-[211px] md:min-w-[523px] lg:min-w-[625px]">
       <div className="absolute inset-0 rounded-2xl bg-[#333333] opacity-10"></div>
-      <div className="relative flex w-full flex-col items-center overflow-hidden rounded-2xl bg-[#222222]/10 p-6 backdrop-blur-md px-[14px] py-[11px] md:px-[24px] md:py-[21px] lg:px-[30px] lg:py-[24px] gap-4">
-        <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-white/50  to-transparent"></div>
+      <div className="relative flex w-full flex-col items-center gap-4 overflow-hidden rounded-2xl bg-[#222222]/10 p-6 px-[14px] py-[11px] backdrop-blur-md md:px-[24px] md:py-[21px] lg:px-[30px] lg:py-[24px]">
+        <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
         <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
 
-        <div className="flex w-full md:flex-row items-center justify-between flex-col p-3 md:p-5 lg:p-6">
-          <div className="flex md:flex-row flex-col items-center gap-4 ">
+        <div className="flex w-full flex-col items-center justify-between p-3 md:flex-row md:p-5 lg:p-6">
+          <div className="flex flex-col items-center gap-4 md:flex-row">
             <div className="relative flex h-[45px] w-[45px] items-center justify-center overflow-hidden rounded-full bg-[#2B6023] text-4xl font-bold text-white md:h-[72px] md:w-[72px]">
               {t.avatar ? (
                 <Image
@@ -146,7 +152,7 @@ const TestimonialCard = ({ t }: { t: TestimonialType }) => {
               {t.name}
             </p>
           </div>
-          <div className="flex gap-2" >
+          <div className="flex gap-2">
             {Array(t.rating)
               .fill(null)
               .map((_, index) => (
