@@ -4,7 +4,7 @@ import { Text } from "@/components/ui";
 
 const Hero = () => {
   return (
-    <div className="text-background bg-[url('/images/bg.png')] bg-cover bg-center pt-[58px] md:pt-[92px] xl:pt-[117px]">
+    <div className="text-background bg-[url('/images/bg.png')] bg-cover bg-center pt-[58px] md:pt-[92px] xl:pt-[112px]">
       <div className="bg-black-gradient">
         <section className="flex flex-col gap-5 !pt-[20px] !pb-[190px] md:!pb-[100px] md:relative md:flex-row md:gap-[32.01px] md:!pt-[35px] xl:justify-between xl:gap-0 xl:!pb-[200px] 2xl:!pt-[60px]">
           <div className="flex h-fit max-w-[710px] flex-col items-center gap-4 md:items-start lg:items-start lg:gap-6 xl:items-start">

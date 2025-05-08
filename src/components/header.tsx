@@ -53,7 +53,7 @@ const Header = () => {
               height={122}
               className="block h-[34px] w-[38px] md:hidden xl:h-[122px] xl:w-[134px]"
             />
-            <p className="font-[family-name:var(--font-sora-sans)] text-[13px] leading-[100%] font-semibold md:text-[20px] xl:text-[25px]">
+            <p className="font-[family-name:var(--font-sora-sans)] text-[13px] leading-[100%] font-semibold md:text-[20px] xl:text-[23px]">
               Trash&nbsp;
             </p>
             <Image
@@ -61,16 +61,16 @@ const Header = () => {
               alt="Trash Lion Logo"
               width={134}
               height={122}
-              className="hidden h-[34px] w-[38px] md:block md:h-[69px] md:w-[77px] xl:h-[85px] xl:w-[105px]"
+              className="hidden h-[34px] w-[38px] md:block md:h-[69px] md:w-[77px] xl:h-[80px] xl:w-[95px]"
             />
-            <p className="font-[family-name:var(--font-sora-sans)] text-[13px] leading-[100%] font-semibold md:text-[20px] xl:text-[25px]">
+            <p className="font-[family-name:var(--font-sora-sans)] text-[13px] leading-[100%] font-semibold md:text-[20px] xl:text-[23px]">
               Lion
             </p>
           </Link>
 
           <div className="hidden 2xl:flex 2xl:justify-self-center">
             <Link href="/" className="flex items-center">
-              <p className="font-[family-name:var(--font-sora-sans)] text-[30px] leading-[100%] font-semibold">
+              <p className="font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-semibold">
                 Trash
               </p>
               <Image
@@ -78,18 +78,18 @@ const Header = () => {
                 alt="Trash Lion Logo"
                 width={134}
                 height={122}
-                className="h-[85px] w-[105px]"
+                className="h-[80px] w-[95px]"
               />
-              <p className="font-[family-name:var(--font-sora-sans)] text-[30px] leading-[100%] font-semibold">
+              <p className="font-[family-name:var(--font-sora-sans)] text-[25px] leading-[100%] font-semibold">
                 Lion
               </p>
             </Link>
           </div>
 
-          <div className="hidden items-center gap-4 md:col-start-3 md:flex md:justify-self-end 2xl:justify-self-end">
+          <div className="hidden items-center gap-12 md:col-start-3 md:flex md:justify-self-end 2xl:justify-self-end">
             <div className="hidden items-center xl:flex gap-2.5">
               <PhoneCall size={30} fill="red" stroke="none" />
-              <p className="font-[family-name:var(--font-sora-sans)] text-[20px] 2xl:text-[25px] leading-[100%] font-bold">
+              <p className="font-[family-name:var(--font-sora-sans)] text-[20px] leading-[100%] font-bold">
                 267 - 356 - 1542
               </p>
             </div>

@@ -51,7 +51,7 @@ const Contact = () => {
           <Text variant="h2" className="text-center xl:text-left">
             Want to Hire The Best In {isMediumScreen && <br />} Philadelphia
             <br />
-            <span className="text-red hidden sm:block"> Call Trash Lion</span>
+            <span className="text-red hidden"> Call Trash Lion</span>
           </Text>
           {/* <Image
             src="/images/map.png"

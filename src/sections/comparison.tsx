@@ -29,7 +29,7 @@ const comparisonSets = [
     id: 3,
     before: "/images/before.png",
     after: "/images/after.png",
-    title: "Home Cleanout",
+    title: "Backyard Cleanup",
   },
 ];
 */
@@ -37,8 +37,8 @@ const comparisonSets = [
 const Comparison = () => {
   // Single static image data
   const staticComparison = {
-    before: "/images/before.jpg",
-    after: "/images/after.jpg",
+    before: "/images/before.png",
+    after: "/images/after.png",
     title: "Backyard Cleanup",
   };
 
@@ -58,7 +58,11 @@ const Comparison = () => {
   // Handle responsive line width
   useEffect(() => {
     const handleResize = () => {
-      setLineWidth(window.innerWidth >= 1024 ? "12px" : "4px");
+      if (window.innerWidth >= 1024) {
+        setLineWidth("12px");
+      } else {
+        setLineWidth("4px");
+      }
     };
 
     handleResize(); // Set initial value
@@ -98,14 +102,11 @@ const Comparison = () => {
         <section>
           <div className="flex flex-col items-center justify-center px-[20px] md:px-[35px] lg:flex-row lg:px-[60px]">
             <div className="flex flex-col">
-              <Text
-                variant="h2"
-                className="text-center text-white"
-              >
+              <Text variant="h2" className="text-center text-white">
                 See How We Make Your Junk{" "}
                 <span className="font-extrabold underline">Disappear!</span>
               </Text>
-              <p className="hidden sm:block mt-4 text-center font-[family-name:var(--font-sora-sans)] text-[25px] leading-[30px] font-semibold text-white/70">
+              <p className="mt-4 hidden text-center font-[family-name:var(--font-sora-sans)] text-[25px] leading-[30px] font-semibold text-white/70 sm:block">
                 <span className="font-extrabold">
                   No job is to big for the lions
                 </span>
@@ -159,7 +160,16 @@ const Comparison = () => {
                       <ReactCompareSliderImage
                         alt="Before"
                         src={staticComparison.before}
-                        style={{ height: "100%", objectFit: "cover" }}
+                        style={{
+                          height: "100%",
+                          objectFit: "cover",
+                          objectPosition: "center",
+                          imageRendering: "crisp-edges",
+                          width: "100%",
+                          maxWidth: "100%",
+                        }}
+                        loading="eager"
+                        draggable={false}
                       />
                       <div className="absolute top-4 left-4 rounded-full bg-black px-3 py-1 text-sm text-white">
                         Before
@@ -171,7 +181,16 @@ const Comparison = () => {
                       <ReactCompareSliderImage
                         alt="After"
                         src={staticComparison.after}
-                        style={{ height: "100%", objectFit: "cover" }}
+                        style={{
+                          height: "100%",
+                          objectFit: "cover",
+                          objectPosition: "center",
+                          imageRendering: "crisp-edges",
+                          width: "100%",
+                          maxWidth: "100%",
+                        }}
+                        loading="eager"
+                        draggable={false}
                       />
                       <div className="bg-red absolute top-4 right-4 rounded-full px-3 py-1 text-sm text-white">
                         After

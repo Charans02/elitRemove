@@ -4,17 +4,23 @@ import { Text } from "@/components/ui";
 import { TESTIMONIALS } from "@/lib/constants";
 import { TestimonialType } from "@/lib/types";
 import useEmblaCarousel from "embla-carousel-react";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
+import React from "react";
 
 const Testimonials = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     containScroll: false,
     align: "center",
+    skipSnaps: false,
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [cardHeight, setCardHeight] = useState(0);
+
+  // Ref for measuring card heights
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -33,6 +39,85 @@ const Testimonials = () => {
   const onSettle = useCallback(() => {
     if (!emblaApi) return;
     emblaApi.scrollTo(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  // Find the tallest card and set all cards to that height
+  useEffect(() => {
+    if (!cardRefs.current.length) return;
+
+    const handleResize = () => {
+      // Reset heights to auto to get natural height
+      cardRefs.current.forEach((ref) => {
+        if (ref) ref.style.height = "auto";
+      });
+
+      // Wait for next render to get correct heights
+      setTimeout(() => {
+        // Find max height
+        let maxHeight = 0;
+        cardRefs.current.forEach((ref) => {
+          if (ref && ref.offsetHeight > maxHeight) {
+            maxHeight = ref.offsetHeight;
+          }
+        });
+
+        // Set exactly the same height to all cards
+        setCardHeight(maxHeight);
+
+        // Directly apply height to all card elements for immediate effect
+        cardRefs.current.forEach((ref) => {
+          if (ref) ref.style.height = `${maxHeight}px`;
+        });
+      }, 50); // Small delay to ensure proper rendering
+    };
+
+    // Initial calculation
+    handleResize();
+
+    // Use debounced resize handler to avoid performance issues
+    let resizeTimer: NodeJS.Timeout;
+    const debouncedResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(handleResize, 100);
+    };
+
+    window.addEventListener("resize", debouncedResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", debouncedResize);
+      clearTimeout(resizeTimer);
+    };
+  }, [TESTIMONIALS]); // Recalculate if testimonials change
+
+  // After embla is initialized and after slides transition
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const handleSlideSelect = () => {
+      // Force an immediate recalculation after slide transition
+      setTimeout(() => {
+        // Find max height again
+        let maxHeight = 0;
+        cardRefs.current.forEach((ref) => {
+          if (ref && ref.offsetHeight > maxHeight) {
+            maxHeight = ref.offsetHeight;
+          }
+        });
+
+        // Update all card heights with the maximum height
+        setCardHeight(maxHeight);
+        cardRefs.current.forEach((ref) => {
+          if (ref) ref.style.height = `${maxHeight}px`;
+        });
+      }, 300); // Wait for transition to complete
+    };
+
+    emblaApi.on("settle", handleSlideSelect);
+
+    return () => {
+      emblaApi.off("settle", handleSlideSelect);
+    };
   }, [emblaApi]);
 
   useEffect(() => {
@@ -57,7 +142,10 @@ const Testimonials = () => {
               <br />
               <span className="text-red"> customers are saying</span>
             </Text>
-            <Text variant="body1" className="text-[14px] md:text-[16px]">
+            <Text
+              variant="body1"
+              className="hidden text-[14px] sm:block md:text-[16px]"
+            >
               Philadelphia has been trusting Trash Lion for 10+ years and our
               work quality speaks for itself see what customers are saying!
             </Text>
@@ -96,7 +184,13 @@ const Testimonials = () => {
                         selectedIndex === idx ? "scale-100" : "scale-90"
                       }`}
                     >
-                      <TestimonialCard t={t} />
+                      <TestimonialCard
+                        t={t}
+                        ref={(el) => {
+                          cardRefs.current[idx] = el;
+                        }}
+                        height={cardHeight}
+                      />
                     </div>
                   </div>
                 ))}
@@ -126,15 +220,23 @@ const Testimonials = () => {
 
 export default Testimonials;
 
-const TestimonialCard = ({ t }: { t: TestimonialType }) => {
+const TestimonialCard = React.forwardRef<
+  HTMLDivElement,
+  { t: TestimonialType; height: number }
+>(({ t, height }, ref) => {
   return (
-    <div className="relative min-w-[211px] md:min-w-[523px] lg:min-w-[625px]">
-      <div className="absolute inset-0 rounded-2xl bg-[#333333] opacity-10"></div>
-      <div className="relative flex w-full flex-col items-center gap-4 overflow-hidden rounded-2xl bg-[#222222]/10 p-6 px-[14px] py-[11px] backdrop-blur-md md:px-[24px] md:py-[21px] lg:px-[30px] lg:py-[24px]">
+    <div className="relative min-w-[211px] p-4 md:min-w-[523px] lg:min-w-[625px]">
+      <div className="absolute inset-0 rounded-2xl bg-black/3"></div>
+      <div className="absolute inset-0 rounded-2xl bg-[#222222]/2 opacity-3"></div>
+      <div
+        ref={ref}
+        className="relative flex w-full flex-col items-center overflow-hidden rounded-2xl px-[14px] py-[11px] backdrop-blur-[3px] md:px-[24px] md:py-[21px] lg:px-[30px] lg:py-[24px]"
+        style={{ height: height ? `${height}px` : "auto", minHeight: "100%" }}
+      >
         <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
         <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
 
-        <div className="flex w-full flex-col items-center justify-between p-3 md:flex-row md:p-5 lg:p-6">
+        <div className="mb-4 flex w-full flex-col items-center justify-between space-y-3 md:flex-row md:space-y-0">
           <div className="flex flex-col items-center gap-4 md:flex-row">
             <div className="relative flex h-[45px] w-[45px] items-center justify-center overflow-hidden rounded-full bg-[#2B6023] text-4xl font-bold text-white md:h-[72px] md:w-[72px]">
               {t.avatar ? (
@@ -148,7 +250,7 @@ const TestimonialCard = ({ t }: { t: TestimonialType }) => {
                 <span>{t.name.charAt(0)}</span>
               )}
             </div>
-            <p className="text-red font-[family-name:var(--font-lato-sans)] text-[16px] leading-[28px] font-semibold md:text-[21px] lg:text-[26px]">
+            <p className="text-red text-center font-[family-name:var(--font-lato-sans)] text-[16px] leading-[28px] font-semibold md:text-left md:text-[21px] lg:text-[26px]">
               {t.name}
             </p>
           </div>
@@ -177,10 +279,15 @@ const TestimonialCard = ({ t }: { t: TestimonialType }) => {
               ))}
           </div>
         </div>
-        <Text className="text-center text-[12px] text-white md:text-[16px] lg:text-[20px]">
-          {t.content}
-        </Text>
+
+        <div className="w-full overflow-y-auto">
+          <Text className="text-center text-[12px] leading-[1.5] text-white md:text-[14px] md:leading-[1.6] lg:text-[18px] lg:leading-[1.8]">
+            {t.content}
+          </Text>
+        </div>
       </div>
     </div>
   );
-};
+});
+
+TestimonialCard.displayName = "TestimonialCard";

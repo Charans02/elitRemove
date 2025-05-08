@@ -14,7 +14,7 @@ const Services = () => {
           We <span className="text-red">remove any unwanted junk</span> you have
           laying around and need gone!
         </Text>
-        <div className="mt-16 flex flex-col justify-between gap-8 xl:flex-row">
+        <div className="mt-8 lg:mt-16 flex flex-col justify-between gap-8 xl:flex-row">
           {SERVICES.map((s, idx) => (
             <ServiceCard key={idx} s={s} />
           ))}

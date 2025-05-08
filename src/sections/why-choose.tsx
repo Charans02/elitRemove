@@ -7,39 +7,39 @@ const WhyChoose = () => {
     <div className="relative">
       <div className="absolute inset-0 bg-[url(/images/bg.png)] bg-cover bg-center opacity-10" />
       <section className="flex flex-col items-center justify-between gap-10 px-[80px] py-[60px] xl:flex-row">
-        <div className="space-y-14">
+        <div className="space-y-14 flex-6/11">
           <Text variant="h2" className="text-center xl:text-left">
             Why Philadelphia
             <br />
             <span className="text-red"> Loves Trash Lion</span>
           </Text>
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-            <div className="flex items-center gap-6">
-              <div className="flex size-12 items-center justify-center rounded-xl p-2 bg-[#2da884]">
+            <div className="flex items-center gap-3">
+              <div className="flex size-6 md:size-8 lg:size-10 xl:size-12 items-center justify-center rounded-[6px] xl:rounded-xl p-1 bg-[#2da884]">
                 <Check size={32} stroke="white" />
               </div>
               <p className="font-[family-name:var(--font-lato-sans)] text-[22px] leading-[32px] font-semibold">
                 No job to big or small
               </p>
             </div>
-            <div className="flex items-center gap-6">
-              <div className="flex size-12 items-center justify-center rounded-xl p-2 bg-[#2da884]">
+            <div className="flex items-center gap-3">
+              <div className="flex size-6 md:size-8 lg:size-10 xl:size-12 items-center justify-center rounded-[6px] xl:rounded-xl p-1 bg-[#2da884]">
                 <Check size={32} stroke="white" />
               </div>
               <p className="font-[family-name:var(--font-lato-sans)] text-[22px] leading-[32px] font-semibold">
                 Fast job completion
               </p>
             </div>
-            <div className="flex items-center gap-6">
-              <div className="flex size-12 items-center justify-center rounded-xl p-2 bg-[#2da884]">
+            <div className="flex items-center gap-3">
+              <div className="flex size-6 md:size-8 lg:size-10 xl:size-12 items-center justify-center rounded-[6px] xl:rounded-xl p-1 bg-[#2da884]">
                 <Check size={32} stroke="white" />
               </div>
               <p className="font-[family-name:var(--font-lato-sans)] text-[22px] leading-[32px] font-semibold">
                 We Are Open 24/7
               </p>
             </div>
-            <div className="flex items-center gap-6">
-              <div className="flex size-12 items-center justify-center rounded-xl p-2 bg-[#2da884]">
+            <div className="flex items-center gap-3">
+              <div className="flex size-6 md:size-8 lg:size-10 xl:size-12 items-center justify-center rounded-[6px] xl:rounded-xl p-1 bg-[#2da884]">
                 <Check size={32} stroke="white" />
               </div>
               <p className="font-[family-name:var(--font-lato-sans)] text-[22px] leading-[32px] font-semibold">
@@ -53,8 +53,8 @@ const WhyChoose = () => {
             </Text>
           </button>
         </div>
-        <div className="relative w-full overflow-hidden xl:ml-7 rounded-2xl">
-          <div className="relative h-[480px]">
+        <div className="relative w-full overflow-hidden xl:ml-7 flex-5/11 rounded-2xl">
+          <div className="relative h-[480px] w-full">
             <Image
               src="/images/trash.png"
               alt=""

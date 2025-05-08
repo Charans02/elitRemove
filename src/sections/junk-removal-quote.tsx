@@ -23,7 +23,7 @@ const JunkRemovalQuote = () => {
           <Field svg={<InformationIcon />} fieldName="How Can We Help?" />
 
           {/* Button */}
-          <button className="flex cursor-pointer justify-center w-full md:w-fit flex-nowrap items-center gap-[3.49px] rounded-[17.47px] bg-[#000000] px-[20.61px] py-[10px] text-[16px] leading-[8.08px] font-[700] text-white md:gap-[5.54px] md:rounded-[27.68px] md:px-[16px] md:py-[11.07px] md:text-[17px] md:leading-[12.81px] xl:gap-[10px] xl:rounded-[50px] xl:px-[30px] xl:py-[21px] xl:text-[18px] xl:leading-[23.14px]">
+          <button className="flex cursor-pointer justify-center w-full md:w-fit flex-nowrap items-center gap-[3.49px] rounded-[17.47px] bg-[#000000] px-[20.61px] py-[10px] text-[16px] leading-[8.08px] font-[700] text-white md:gap-[4px] md:rounded-[27.68px] md:px-[10px] md:py-[13px] md:text-[14px] md:leading-[12.81px] xl:gap-[6px] xl:rounded-[50px] xl:px-[15px] xl:py-[21px] xl:text-[18px] xl:leading-[23.14px]2xl:px-[30px]">
             <CircleArrowIcon/>
             <span className="text-nowrap">Get My Junk GONE</span>
           </button>

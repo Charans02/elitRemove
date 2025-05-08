@@ -96,21 +96,21 @@ export const TESTIMONIALS: TestimonialType[] = [
     avatar: "/images/avatar_1.png",
     name: "Pedro Beatty",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut diam sapien. Phasellus pellentesque, quam sed tempus tempus, dui magna semper urna, placerat tristique diam augue ut nunc.",
+      "I hired Leo and his team from Trash Lion, and they did an impeccable, amazing, fast job!!! This company, because of their great reviews, and they definitely showed me the same. Great service!They were on time and they did exactly what they said!",
     rating: 5,
   },
   {
     avatar: "/images/avatar_2.png",
     name: "Justin Gerhold Jr.",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut diam sapien. Phasellus pellentesque, quam sed tempus tempus, dui magna semper urna, placerat tristique diam augue ut nunc.",
+      "I had this RV stuck in my driveway forever. I called a bunch of other junk removal companies and they all said they can’t do it. Trash Lion was different they were able to come out and pull it from my house no problem and got it out fast. I was very impressed and finally had this eye sore removed!",
     rating: 3,
   },
   {
     avatar: "/images/avatar_3.png",
     name: "Rufus Mohr",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut diam sapien. Phasellus pellentesque, quam sed tempus tempus, dui magna semper urna, placerat tristique diam augue ut nunc.",
+      "We had a great experience with Trash Lion - they were extremely professional and friendly, and removed my item at a great price!",
     rating: 4,
   },
 ];

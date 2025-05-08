@@ -48,15 +48,32 @@ const Experts = () => {
                 At Work!
               </Text>
             </div>
-            <p className="max-w-[478px] text-center font-[family-name:var(--font-sora-sans)] text-[19px] leading-[30px] xl:text-left">
+            <p className="hidden sm:block max-w-[478px] text-center font-[family-name:var(--font-sora-sans)] text-[19px] leading-[30px] xl:text-left">
               What&apos;s stopping your dreams from becoming a reality. Trash
               Lion will get your area looking right.
             </p>
           </div>
 
-          {/* Static image grid */}
+          {/* Only showing the first image */}
+          <div className="mt-16">
+            <div className="flex flex-col items-center">
+              <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
+                <Image
+                  src={
+                    EXPERT_IMAGES[0].img_group[0]?.img_url ||
+                    "/images/image.png"
+                  }
+                  alt={EXPERT_IMAGES[0].img_group[0]?.img_name || ""}
+                  fill
+                  className="object-cover object-center"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Commented out additional images */}
+          {/*
           <div className="mt-16 space-y-8">
-            {/* First row with 2 images - only first is visible on mobile */}
             <div className="flex flex-col items-center gap-8 xl:flex-row">
               <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
                 <Image
@@ -82,7 +99,6 @@ const Experts = () => {
               </div>
             </div>
 
-            {/* Second row with 3 images - hidden on mobile */}
             <div className="hidden flex-col items-center gap-8 xl:flex xl:flex-row">
               <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
                 <Image
@@ -119,6 +135,7 @@ const Experts = () => {
               </div>
             </div>
           </div>
+          */}
 
           {/* Commented carousel implementation - will be used later */}
           {/*
