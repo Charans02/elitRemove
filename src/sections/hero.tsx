@@ -4,9 +4,9 @@ import { Text } from "@/components/ui";
 
 const Hero = () => {
   return (
-    <div className="text-background bg-[url('/images/bg.png')] bg-cover bg-center pt-[58px] md:pt-[92px] xl:pt-[143px]">
+    <div className="text-background bg-[url('/images/bg.png')] bg-cover bg-center pt-[58px] md:pt-[92px] xl:pt-[117px]">
       <div className="bg-black-gradient">
-        <section className="flex flex-col gap-5 !pt-[20px] !pb-[100px] md:relative md:flex-row md:gap-[32.01px] md:!pt-[35px] xl:justify-between xl:gap-0 xl:!pb-[200px] 2xl:!pt-[60px]">
+        <section className="flex flex-col gap-5 !pt-[20px] !pb-[190px] md:!pb-[100px] md:relative md:flex-row md:gap-[32.01px] md:!pt-[35px] xl:justify-between xl:gap-0 xl:!pb-[200px] 2xl:!pt-[60px]">
           <div className="flex h-fit max-w-[710px] flex-col items-center gap-4 md:items-start lg:items-start lg:gap-6 xl:items-start">
             <Text
               variant="h1"
@@ -30,26 +30,26 @@ const Hero = () => {
             <div className="flex items-center gap-2.5 py-2 lg:gap-5 lg:py-3">
               <div className="flex items-center gap-2.5">
                 <CalendarRange className="size-3.5 lg:size-4 xl:size-6" />
-                <Text className="text-[9px] leading-[13px] font-semibold md:text-[11px] md:leading-[15px] lg:text-[14px] xl:text-[17px] lg:leading-[24px]">
+                <Text className="text-[11px] leading-[13px] font-semibold md:text-[11px] md:leading-[15px] lg:text-[14px] xl:text-[17px] lg:leading-[24px]">
                   10+ Years
                 </Text>
               </div>
               <div className="bg-background h-5 w-px lg:h-9" />
               <div className="flex items-center gap-2.5">
                 <Truck className="size-3.5 lg:size-4 xl:size-6" />
-                <Text className="text-[9px] leading-[13px] font-semibold md:text-[11px] md:leading-[15px] lg:text-[14px] xl:text-[17px] lg:leading-[24px] ">
+                <Text className="text-[11px] leading-[13px] font-semibold md:text-[11px] md:leading-[15px] lg:text-[14px] xl:text-[17px] lg:leading-[24px] ">
                   3 Trash Trucks
                 </Text>
               </div>
               <div className="bg-background h-5 w-px lg:h-9" />
               <div className="flex items-center gap-2.5">
                 <Globe className="size-3.5 lg:size-4 xl:size-6" />
-                <Text className="text-[9px] leading-[13px] font-semibold md:text-[11px] md:leading-[15px] lg:text-[14px] xl:text-[17px] lg:leading-[24px]">
+                <Text className="text-[11px] leading-[13px] font-semibold md:text-[11px] md:leading-[15px] lg:text-[14px] xl:text-[17px] lg:leading-[24px]">
                   Serving 6+ Counties
                 </Text>
               </div>
             </div>
-            <div className="customers-container flex w-fit items-center gap-3 rounded-full py-2 pr-6 pl-3 lg:gap-6">
+            <div className="customers-container flex w-fit items-center gap-3 border-none rounded-full py-2 pr-6 pl-3 lg:gap-6">
               <Image
                 src="/images/customers.png"
                 alt=""
@@ -57,11 +57,11 @@ const Hero = () => {
                 height={59}
                 className="h-[35px] w-[73px] lg:h-[59px] lg:w-[127px]"
               />
-              <div>
-                <Text className="text-[18px] leading-[22px] font-semibold lg:text-[22px] lg:leading-[26px] xl:text-[32px] xl:leading-[32px]">
+              <div className="flex justify-between items-end gap-1">
+                <Text className="text-[18px] leading-[14px] font-semibold md:text-[22px] md:leading-[26px] lg:text-[22px] lg:leading-[26px] xl:text-[32px] xl:leading-[32px]">
                   10K+
                 </Text>
-                <Text className="text-[8px] leading-[11px] font-extrabold lg:text-[15px] lg:leading-[20px] xl:text-[15px] xl:leading-[20px]">
+                <Text className="text-[13px] leading-[11px] font-extrabold md:text-[15px] md:leading-[20px] lg:text-[15px] lg:leading-[20px] xl:text-[15px] xl:leading-[20px]">
                   Happy Customers
                 </Text>
               </div>

@@ -7,7 +7,7 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
-import { ServiceType, TestimonialType, Expert, ComparisonSet } from "./types";
+import { ServiceType, TestimonialType, Expert, ComparisonSet, JunkRemovalType } from "./types";
 
 export const CONTACT_INFO = [
   {
@@ -249,5 +249,24 @@ export const COMPARISON_SETS: ComparisonSet[] = [
     before: "/images/before.jpg",
     after: "/images/after.jpg",
     title: "Home Cleanout",
+  },
+];
+
+export const JUNK_REMOVAL_IMAGES: JunkRemovalType[] = [
+  {
+    id: 1,
+    img_url: "/images/junk_remove.png",
+    img_name: "Junk Removal 1",
+
+  },
+  {
+    id: 2,
+    img_url: "/images/junk_remove.png",
+    img_name: "Junk Removal 2",
+  },
+  {
+    id: 3,
+    img_url: "/images/junk_remove.png",
+    img_name: "Junk Removal 3",
   },
 ];

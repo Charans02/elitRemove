@@ -56,7 +56,7 @@ const Experts = () => {
 
           {/* Static image grid */}
           <div className="mt-16 space-y-8">
-            {/* First row with 2 images */}
+            {/* First row with 2 images - only first is visible on mobile */}
             <div className="flex flex-col items-center gap-8 xl:flex-row">
               <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
                 <Image
@@ -69,7 +69,7 @@ const Experts = () => {
                   className="object-cover object-center"
                 />
               </div>
-              <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
+              <div className="relative hidden aspect-video w-full max-w-[768px] overflow-hidden rounded-lg xl:block">
                 <Image
                   src={
                     EXPERT_IMAGES[0].img_group[1]?.img_url ||
@@ -82,8 +82,8 @@ const Experts = () => {
               </div>
             </div>
 
-            {/* Second row with 3 images */}
-            <div className="flex flex-col items-center gap-8 xl:flex-row">
+            {/* Second row with 3 images - hidden on mobile */}
+            <div className="hidden flex-col items-center gap-8 xl:flex xl:flex-row">
               <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
                 <Image
                   src={

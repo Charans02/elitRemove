@@ -5,8 +5,8 @@ import { Text } from "@/components/ui";
 const STATES = [
   { content: 100, more: true, description: "Satisfied Customers" },
   { content: 10, more: true, description: "Years Experience" },
-  { content: 3, more: false, description: "Trash Trucks" },
-  { content: 6, more: false, description: "Counties We Service" },
+  { content: 3, more: true, description: "Trash Trucks" },
+  { content: 6, more: true, description: "Counties We Service" },
 ];
 
 const States = () => {

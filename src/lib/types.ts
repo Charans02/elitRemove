@@ -29,3 +29,8 @@ export interface ComparisonSet {
   title: string;
 }
 
+export interface JunkRemovalType {
+  id: number;
+  img_url: string;
+  img_name: string;
+}

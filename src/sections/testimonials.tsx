@@ -57,7 +57,7 @@ const Testimonials = () => {
             </Text>
           </div>
           <div className="mt-0 flex justify-center md:justify-end lg:mt-6">
-            <div className="flex space-x-3">
+            <div className="flex space-x-6 mt-4">
               <button
                 className="bg-red hover:bg-red/80 flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors"
                 onClick={scrollPrev}
@@ -76,7 +76,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="mt-16 w-full">
+        <div className="mt-10 w-full">
           <div className="carousel-container relative">
             <div className="embla overflow-hidden" ref={emblaRef}>
               <div className="embla__container flex">

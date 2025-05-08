@@ -19,17 +19,17 @@ const Header = () => {
         <div className="mx-auto flex max-w-[1512px] flex-row-reverse items-center justify-between gap-1.5 px-[20px] py-3 md:grid md:grid-cols-3 md:px-[35px] lg:grid lg:h-[92px] lg:grid-cols-3 lg:px-[60px] lg:py-1 xl:flex xl:h-fit xl:flex-row 2xl:grid 2xl:grid-cols-3 2xl:items-center 2xl:px-[60px] xl:py-4">
           <div className="hidden gap-12 xl:flex 2xl:justify-self-start">
             <Link href="#">
-              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] xl:text-[20px] 2xl:text-[25px] leading-[100%] font-normal transition-all hover:underline">
+              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] xl:text-[18px] 2xl:text-[20px] leading-[100%] font-normal transition-all hover:underline">
                 Home
               </p>
             </Link>
             <Link href="#">
-              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] xl:text-[20px] 2xl:text-[25px] leading-[100%] font-normal transition-all hover:underline">
+              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] xl:text-[18px] 2xl:text-[20px] leading-[100%] font-normal transition-all hover:underline">
                 About Us
               </p>
             </Link>
             <Link href="#">
-              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] xl:text-[20px] 2xl:text-[25px] leading-[100%] font-normal transition-all hover:underline">
+              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] xl:text-[18px] 2xl:text-[20px] leading-[100%] font-normal transition-all hover:underline">
                 Our Services
               </p>
             </Link>
@@ -53,7 +53,7 @@ const Header = () => {
               height={122}
               className="block h-[34px] w-[38px] md:hidden xl:h-[122px] xl:w-[134px]"
             />
-            <p className="font-[family-name:var(--font-sora-sans)] text-[13px] leading-[100%] font-semibold md:text-[20px] xl:text-[35px]">
+            <p className="font-[family-name:var(--font-sora-sans)] text-[13px] leading-[100%] font-semibold md:text-[20px] xl:text-[25px]">
               Trash&nbsp;
             </p>
             <Image
@@ -61,16 +61,16 @@ const Header = () => {
               alt="Trash Lion Logo"
               width={134}
               height={122}
-              className="hidden h-[34px] w-[38px] md:block md:h-[69px] md:w-[77px] xl:h-[122px] xl:w-[134px]"
+              className="hidden h-[34px] w-[38px] md:block md:h-[69px] md:w-[77px] xl:h-[85px] xl:w-[105px]"
             />
-            <p className="font-[family-name:var(--font-sora-sans)] text-[13px] leading-[100%] font-semibold md:text-[20px] xl:text-[35px]">
+            <p className="font-[family-name:var(--font-sora-sans)] text-[13px] leading-[100%] font-semibold md:text-[20px] xl:text-[25px]">
               Lion
             </p>
           </Link>
 
           <div className="hidden 2xl:flex 2xl:justify-self-center">
             <Link href="/" className="flex items-center">
-              <p className="font-[family-name:var(--font-sora-sans)] text-[35px] leading-[100%] font-semibold">
+              <p className="font-[family-name:var(--font-sora-sans)] text-[30px] leading-[100%] font-semibold">
                 Trash
               </p>
               <Image
@@ -78,9 +78,9 @@ const Header = () => {
                 alt="Trash Lion Logo"
                 width={134}
                 height={122}
-                className="h-[112px] w-[134px]"
+                className="h-[85px] w-[105px]"
               />
-              <p className="font-[family-name:var(--font-sora-sans)] text-[35px] leading-[100%] font-semibold">
+              <p className="font-[family-name:var(--font-sora-sans)] text-[30px] leading-[100%] font-semibold">
                 Lion
               </p>
             </Link>

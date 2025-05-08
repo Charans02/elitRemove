@@ -1,12 +1,49 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import {
+  ReactCompareSlider,
+  ReactCompareSliderImage,
+  ReactCompareSliderHandle,
+} from "react-compare-slider";
 import { Text } from "@/components/ui";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import useEmblaCarousel from "embla-carousel-react";
-import Image from "next/image";
-import { COMPARISON_SETS } from "@/lib/constants";
+import { useState, useEffect } from "react";
+// Commented carousel imports for future use
+// import { ChevronLeft, ChevronRight } from "lucide-react";
+// import useEmblaCarousel from "embla-carousel-react";
+
+// Carousel data saved for future use
+/*
+const comparisonSets = [
+  {
+    id: 1,
+    before: "/images/before.png",
+    after: "/images/after.png",
+    title: "Backyard Cleanup",
+  },
+  {
+    id: 2,
+    before: "/images/before.png",
+    after: "/images/after.png",
+    title: "Garage Cleanup",
+  },
+  {
+    id: 3,
+    before: "/images/before.png",
+    after: "/images/after.png",
+    title: "Home Cleanout",
+  },
+];
+*/
 
 const Comparison = () => {
+  // Single static image data
+  const staticComparison = {
+    before: "/images/before.jpg",
+    after: "/images/after.jpg",
+    title: "Backyard Cleanup",
+  };
+
+  /*
+  // Commented carousel code for future use
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     containScroll: false,
@@ -14,7 +51,23 @@ const Comparison = () => {
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
+  */
 
+  const [lineWidth, setLineWidth] = useState("4px");
+
+  // Handle responsive line width
+  useEffect(() => {
+    const handleResize = () => {
+      setLineWidth(window.innerWidth >= 1024 ? "12px" : "4px");
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  /*
+  // Commented carousel navigation functions for future use
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
   }, [emblaApi]);
@@ -37,21 +90,22 @@ const Comparison = () => {
       emblaApi.off("select", onSelect);
     };
   }, [emblaApi, onSelect]);
+  */
 
   return (
     <div className="bg-[url('/images/bg.png')] bg-cover bg-center">
       <div className="bg-black/60">
         <section>
-          <div className="flex flex-col items-center justify-between px-[20px] md:px-[35px] lg:flex-row lg:items-end lg:px-[60px]">
+          <div className="flex flex-col items-center justify-center px-[20px] md:px-[35px] lg:flex-row lg:px-[60px]">
             <div className="flex flex-col">
               <Text
                 variant="h2"
-                className="text-center text-white xl:text-left"
+                className="text-center text-white"
               >
                 See How We Make Your Junk{" "}
                 <span className="font-extrabold underline">Disappear!</span>
               </Text>
-              <p className="mt-4 text-center font-[family-name:var(--font-sora-sans)] text-[25px] leading-[30px] font-semibold text-white/70 xl:text-left">
+              <p className="hidden sm:block mt-4 text-center font-[family-name:var(--font-sora-sans)] text-[25px] leading-[30px] font-semibold text-white/70">
                 <span className="font-extrabold">
                   No job is to big for the lions
                 </span>
@@ -60,6 +114,7 @@ const Comparison = () => {
               </p>
             </div>
 
+            {/* Commented carousel navigation buttons for future use
             <div className="mt-4 flex justify-center md:mt-0 md:justify-end">
               <div className="flex space-x-3">
                 <button
@@ -78,54 +133,58 @@ const Comparison = () => {
                 </button>
               </div>
             </div>
+            */}
           </div>
 
-          {/* Carousel Container */}
+          {/* Static Before/After Comparison */}
           <div className="mt-8 md:mt-12">
-            <div className="carousel-container relative">
-              <div className="embla overflow-hidden" ref={emblaRef}>
-                <div className="embla__container flex">
-                  {COMPARISON_SETS.map((item) => (
-                    <div
-                      key={item.id}
-                      className="embla__slide relative mx-5 flex-[0_0_100%] md:flex-[0_0_65%]"
-                    >
-                      <div className="before-after-container flex h-[600px] w-full flex-col overflow-hidden  md:h-[400px] md:flex-row lg:h-[500px]">
-                        {/* Before Image */}
-                        <div className="relative h-[48%] flex-1 overflow-hidden rounded-bl-[10px] rounded-tl-[10px] md:h-full">
-                          <Image
-                            src={item.before}
-                            alt={`${item.title} Before`}
-                            fill
-                            className="object-cover"
-                          />
-                          <div className="absolute top-4 left-4 z-10 rounded-full bg-black px-3 py-1 text-sm text-white">
-                            Before
-                          </div>
-                        </div>
-
-                        {/* After Image */}
-                        <div className="relative h-[48%] flex-1 overflow-hidden rounded-br-[10px] rounded-tr-[10px] md:h-full">
-                          <Image
-                            src={item.after}
-                            alt={`${item.title} After`}
-                            fill
-                            className="object-cover"
-                          />
-                          <div className="bg-red absolute top-4 right-4 z-10 rounded-full px-3 py-1 text-sm text-white">
-                            After
-                          </div>
-                        </div>
+            <div className="mx-auto max-w-4xl">
+              <div className="before-after-container relative h-[300px] w-full overflow-hidden rounded-[20px] md:h-[400px] lg:h-[500px]">
+                <ReactCompareSlider
+                  className="h-full w-full"
+                  position={50}
+                  handle={
+                    <ReactCompareSliderHandle
+                      buttonStyle={{
+                        backgroundColor: "red",
+                      }}
+                      linesStyle={{
+                        width: lineWidth,
+                        background: "red",
+                      }}
+                    />
+                  }
+                  itemOne={
+                    <div className="relative h-full w-full">
+                      <ReactCompareSliderImage
+                        alt="Before"
+                        src={staticComparison.before}
+                        style={{ height: "100%", objectFit: "cover" }}
+                      />
+                      <div className="absolute top-4 left-4 rounded-full bg-black px-3 py-1 text-sm text-white">
+                        Before
                       </div>
                     </div>
-                  ))}
-                </div>
+                  }
+                  itemTwo={
+                    <div className="relative h-full w-full">
+                      <ReactCompareSliderImage
+                        alt="After"
+                        src={staticComparison.after}
+                        style={{ height: "100%", objectFit: "cover" }}
+                      />
+                      <div className="bg-red absolute top-4 right-4 rounded-full px-3 py-1 text-sm text-white">
+                        After
+                      </div>
+                    </div>
+                  }
+                />
               </div>
             </div>
 
-            {/* Slide Indicators */}
+            {/* Commented slide indicators for future use 
             <div className="mt-6 flex justify-center space-x-2">
-              {COMPARISON_SETS.map((_, index) => (
+              {comparisonSets.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => {
@@ -138,6 +197,7 @@ const Comparison = () => {
                 />
               ))}
             </div>
+            */}
           </div>
         </section>
       </div>

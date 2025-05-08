@@ -9,7 +9,7 @@ const CircleArrowIcon: React.FC<CircleArrowIconProps> = ({ className }) => {
     <svg
       className={
         className ||
-        "h-[11.72px] w-[11.72px] md:h-[16.53px] md:w-[16.53px] xl:h-[29.86px] xl:w-[29.86px]"
+        "h-[16px] w-[16px] md:h-[16.53px] md:w-[16.53px] xl:h-[29.86px] xl:w-[29.86px]"
       }
       viewBox="0 0 25 24"
       fill="none"

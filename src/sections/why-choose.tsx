@@ -53,7 +53,7 @@ const WhyChoose = () => {
             </Text>
           </button>
         </div>
-        <div className="relative w-full overflow-hidden rounded-2xl">
+        <div className="relative w-full overflow-hidden xl:ml-7 rounded-2xl">
           <div className="relative h-[480px]">
             <Image
               src="/images/trash.png"
