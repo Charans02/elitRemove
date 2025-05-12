@@ -141,7 +141,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <div className="hidden items-center gap-20 md:col-start-3 md:flex md:justify-self-end 2xl:justify-self-end">
+          <div className="hidden items-center gap-20 md:col-start-3 md:flex md:justify-self-end 2xl:justify-self-end 2xl:gap-12">
             <div className="hidden items-center gap-2.5 text-nowrap xl:flex">
               <PhoneCall size={30} fill="red" stroke="none" />
               <p className="font-[family-name:var(--font-sora-sans)] text-[20px] leading-[100%] font-bold">
@@ -149,7 +149,7 @@ const Header = () => {
               </p>
             </div>
             <button
-              className="group bg-red hover:text-red flex cursor-pointer items-center gap-2.5 rounded-full px-9 py-3 transition-colors hover:bg-white"
+              className="group bg-red hover:text-red flex cursor-pointer items-center gap-2.5 rounded-full px-9 py-3 transition-colors hover:bg-white 2xl:w-fit 2xl:text-nowrap"
               onClick={() => {
                 const phone = "+12673561542";
                 window.open(`tel:${phone}`, "_self");
