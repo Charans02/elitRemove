@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Lato, Sora } from "next/font/google";
+import { Toaster } from "sonner";
 
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 import "./globals.css";
+import "./custom-toast.css";
 
 const latoSans = Lato({
   weight: ["400", "700"],
@@ -33,6 +35,10 @@ export default function RootLayout({
         <Header />
         <main className="overflow-hidden">{children}</main>
         <Footer />
+        <Toaster
+          position="top-right"
+          toastOptions={{ style: { zIndex: 1000 } }}
+        />
       </body>
     </html>
   );

@@ -22,9 +22,9 @@ export default function Home() {
         <JunkRemovalQuote />
       </div>
       <Banner />
-      <States />
-      <Comparison />
       <Services />
+      <Comparison />
+      <States />
       <Testimonials />
       <Story />
       <Banner />

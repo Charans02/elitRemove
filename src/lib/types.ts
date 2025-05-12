@@ -34,3 +34,9 @@ export interface JunkRemovalType {
   img_url: string;
   img_name: string;
 }
+
+export interface Customer {
+  id: number;
+  avatar_url: string;
+  name: string;
+}

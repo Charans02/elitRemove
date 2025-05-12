@@ -88,7 +88,7 @@ const Testimonials = () => {
       window.removeEventListener("resize", debouncedResize);
       clearTimeout(resizeTimer);
     };
-  }, [TESTIMONIALS]); // Recalculate if testimonials change
+  }, []); // TESTIMONIALS is a constant, not needed in dependency array
 
   // After embla is initialized and after slides transition
   useEffect(() => {
@@ -133,87 +133,90 @@ const Testimonials = () => {
   }, [emblaApi, onSelect, onSettle]);
 
   return (
-    <div className="bg-black/50 bg-[url(/images/review_bg.png)] bg-cover bg-center text-white">
-      <section className="flex flex-col items-center lg:items-start">
-        <div className="flex w-full flex-col items-center justify-center xl:flex-row xl:items-end xl:justify-between">
-          <div className="space-y-6 text-center lg:text-left">
-            <Text variant="h2">
-              Read what our
-              <br />
-              <span className="text-red"> customers are saying</span>
-            </Text>
-            <Text
-              variant="body1"
-              className="hidden text-[14px] sm:block md:text-[16px]"
-            >
-              Philadelphia has been trusting Trash Lion for 10+ years and our
-              work quality speaks for itself see what customers are saying!
-            </Text>
-          </div>
-          <div className="mt-0 flex justify-center md:justify-end lg:mt-6">
-            <div className="mt-4 flex space-x-6">
-              <button
-                className="bg-red hover:bg-red/80 flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors"
-                onClick={scrollPrev}
-                aria-label="Previous testimonial"
+    <div className="relative">
+      <div className="bg-opacity-95 absolute inset-0 bg-black bg-[url(/images/review_bg.png)] bg-cover bg-center blur-[2px]"></div>
+      <div className="relative z-10 text-white">
+        <section id="testimonials" className="flex flex-col items-center lg:items-start">
+          <div className="w-full bg-opacity-95 flex-col justify-center flex lg:flex-row xl:items-end xl:justify-start gap-2 lg:gap-10">
+            <div className="space-y-6 text-center lg:text-left">
+              <Text variant="h2">
+                Read what our
+                <br />
+                <span className="text-red"> customers are saying!</span>
+              </Text>
+              <Text
+                variant="body1"
+                className="hidden text-[16px] md:text-[18px] lg:text-[20px]"
               >
-                <ChevronLeft size={24} />
-              </button>
-              <button
-                className="bg-red hover:bg-red/80 flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors"
-                onClick={scrollNext}
-                aria-label="Next testimonial"
-              >
-                <ChevronRight size={24} />
-              </button>
+                Philadelphia has been trusting Trash Lion for 10+ years and our
+                work quality speaks for itself see what customers are saying!
+              </Text>
             </div>
-          </div>
-        </div>
-
-        <div className="mt-10 w-full">
-          <div className="carousel-container relative">
-            <div className="embla overflow-hidden" ref={emblaRef}>
-              <div className="embla__container flex">
-                {TESTIMONIALS.map((t, idx) => (
-                  <div
-                    key={idx}
-                    className="embla__slide relative mx-0 flex-[0_0_100%] md:flex-[0_0_55%]"
-                  >
-                    <div
-                      className={`origin-center transform transition-all duration-500 ease-in-out ${
-                        selectedIndex === idx ? "scale-100" : "scale-90"
-                      }`}
-                    >
-                      <TestimonialCard
-                        t={t}
-                        ref={(el) => {
-                          cardRefs.current[idx] = el;
-                        }}
-                        height={cardHeight}
-                      />
-                    </div>
-                  </div>
-                ))}
+            <div className="sm:mt-0 flex sm:my-auto mx-auto lg:mx-0 lg:mt-5 xl:mt-13 sm:mr-auto mb-8">
+              <div className="mt-4 flex space-x-6">
+                <button
+                  className="bg-red hover:bg-red/80 flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors"
+                  onClick={scrollPrev}
+                  aria-label="Previous testimonial"
+                >
+                  <ChevronLeft size={24} />
+                </button>
+                <button
+                  className="bg-red hover:bg-red/80 flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors"
+                  onClick={scrollNext}
+                  aria-label="Next testimonial"
+                >
+                  <ChevronRight size={24} />
+                </button>
               </div>
             </div>
           </div>
 
-          <div className="mt-6 flex justify-center space-x-2">
-            {TESTIMONIALS.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  if (emblaApi) emblaApi.scrollTo(index);
-                }}
-                className={`h-2 w-2 rounded-full transition-all ${
-                  index === selectedIndex ? "bg-red" : "bg-white/70"
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
+          <div className="mt-10 w-full">
+            <div className="carousel-container relative">
+              <div className="embla overflow-hidden" ref={emblaRef}>
+                <div className="embla__container flex">
+                  {TESTIMONIALS.map((t, idx) => (
+                    <div
+                      key={idx}
+                      className="embla__slide relative mx-0 flex-[0_0_100%] md:flex-[0_0_55%]"
+                    >
+                      <div
+                        className={`origin-center transform transition-all duration-500 ease-in-out ${
+                          selectedIndex === idx ? "scale-100" : "scale-90"
+                        }`}
+                      >
+                        <TestimonialCard
+                          t={t}
+                          ref={(el) => {
+                            cardRefs.current[idx] = el;
+                          }}
+                          height={cardHeight}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 flex justify-center space-x-2">
+              {TESTIMONIALS.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    if (emblaApi) emblaApi.scrollTo(index);
+                  }}
+                  className={`h-2 w-2 rounded-full transition-all ${
+                    index === selectedIndex ? "bg-red" : "bg-white/70"
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 };
@@ -226,11 +229,11 @@ const TestimonialCard = React.forwardRef<
 >(({ t, height }, ref) => {
   return (
     <div className="relative min-w-[211px] p-4 md:min-w-[523px] lg:min-w-[625px]">
-      <div className="absolute inset-0 rounded-2xl bg-black/3"></div>
-      <div className="absolute inset-0 rounded-2xl bg-[#222222]/2 opacity-3"></div>
+      <div className="absolute inset-0 rounded-2xl bg-black/1"></div>
+      <div className="absolute inset-0 rounded-2xl bg-black/2 opacity-30"></div>
       <div
         ref={ref}
-        className="relative flex w-full flex-col items-center overflow-hidden rounded-2xl px-[14px] py-[11px] backdrop-blur-[3px] md:px-[24px] md:py-[21px] lg:px-[30px] lg:py-[24px]"
+        className="relative flex w-full flex-col items-center overflow-hidden rounded-2xl px-[14px] py-[11px] backdrop-blur-[10px] md:px-[24px] md:py-[21px] lg:px-[30px] lg:py-[24px]"
         style={{ height: height ? `${height}px` : "auto", minHeight: "100%" }}
       >
         <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
@@ -281,7 +284,7 @@ const TestimonialCard = React.forwardRef<
         </div>
 
         <div className="w-full overflow-y-auto">
-          <Text className="text-center text-[12px] leading-[1.5] text-white md:text-[14px] md:leading-[1.6] lg:text-[18px] lg:leading-[1.8]">
+          <Text className="overflow-auto text-center text-[14px] leading-[1.5] text-white md:text-[16px] md:leading-[1.6] lg:text-[18px] lg:leading-[1.8]">
             {t.content}
           </Text>
         </div>

@@ -1,13 +1,13 @@
 import {
   Facebook,
   Instagram,
-  Twitter,
-  Youtube,
+  // Twitter,
+  // Youtube,
   Mail,
   MapPin,
   Phone,
 } from "lucide-react";
-import { ServiceType, TestimonialType, Expert, ComparisonSet, JunkRemovalType } from "./types";
+import { ServiceType, TestimonialType, Expert, ComparisonSet, JunkRemovalType, Customer } from "./types";
 
 export const CONTACT_INFO = [
   {
@@ -34,39 +34,39 @@ export const SOCIAL_LINKS = [
     icon: <Instagram size={24} />,
     url: "/",
   },
-  {
-    name: "Twitter",
-    icon: <Twitter size={24} />,
-    url: "/",
-  },
+  // {
+  //   name: "Twitter",
+  //   icon: <Twitter size={24} />,
+  //   url: "/",
+  // },
   {
     name: "Facebook",
     icon: <Facebook size={24} />,
     url: "/",
   },
-  {
-    name: "Youtube",
-    icon: <Youtube size={24} />,
-    url: "/",
-  },
+  // {
+  //   name: "Youtube",
+  //   icon: <Youtube size={24} />,
+  //   url: "/",
+  // },
 ];
 
 export const QUICK_LINKS = [
   {
     name: "About Us",
-    url: "#",
+    url: "#story",
   },
   {
-    name: "Service",
-    url: "#",
+    name: "Services",
+    url: "#services",
   },
   {
-    name: "Pricing",
-    url: "#",
+    name: "Reviews",
+    url: "#testimonials",
   },
   {
-    name: "Blog",
-    url: "#",
+    name: "Contact Us",
+    url: "#contact",
   },
 ];
 
@@ -96,22 +96,22 @@ export const TESTIMONIALS: TestimonialType[] = [
     avatar: "/images/avatar_1.png",
     name: "Pedro Beatty",
     content:
-      "I hired Leo and his team from Trash Lion, and they did an impeccable, amazing, fast job!!! This company, because of their great reviews, and they definitely showed me the same. Great service!They were on time and they did exactly what they said!",
+      "Needed appliances removed out of a property I had, (refrigerator, oven, washer and, dryer). Trash Lion came out had them removed quickly. Will definitely use them again and refer to my friends that need junk removed.",
     rating: 5,
   },
   {
     avatar: "/images/avatar_2.png",
     name: "Justin Gerhold Jr.",
     content:
-      "I had this RV stuck in my driveway forever. I called a bunch of other junk removal companies and they all said they can’t do it. Trash Lion was different they were able to come out and pull it from my house no problem and got it out fast. I was very impressed and finally had this eye sore removed!",
-    rating: 3,
+      "My tenant moved out of my property, needed to get all the old furniture out of the apartment. Trash Lion had it done in a day.",
+    rating: 5,
   },
   {
     avatar: "/images/avatar_3.png",
     name: "Rufus Mohr",
     content:
-      "We had a great experience with Trash Lion - they were extremely professional and friendly, and removed my item at a great price!",
-    rating: 4,
+      "Had a very easy time working with him. I needed my garage cleaned out before the holidays. The owner came out on the weekend, got it all done in a timely manner and left my garage looking great.",
+    rating: 5,
   },
 ];
 
@@ -268,5 +268,28 @@ export const JUNK_REMOVAL_IMAGES: JunkRemovalType[] = [
     id: 3,
     img_url: "/images/junk_remove.png",
     img_name: "Junk Removal 3",
+  },
+];
+
+export const CUSTOMERS: Customer[] = [
+  {
+    id: 1,
+    avatar_url: "/images/avatar_1.png",
+    name: "Pedro Beatty",
+  },
+  {
+    id: 2,
+    avatar_url: "/images/avatar_2.png",
+    name: "Justin Gerhold Jr.",
+  },
+  {
+    id: 3,
+    avatar_url: "/images/avatar_3.png",
+    name: "Rufus Mohr",
+  },
+  {
+    id: 4,
+    avatar_url: "/images/avatar_1.png",
+    name: "John Doe",
   },
 ];

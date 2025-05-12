@@ -13,9 +13,9 @@ const textVariants = tv({
       h5: "text-[20px] lg:text-[30px] leading-[100%] font-normal",
       h6: "font-[family-name:var(--font-sora-sans)] text-[20px] leading -[28px] font-semibold",
       body1:
-        "font-[family-name:var(--font-sora-sans)] text-[14px] md:text-[16px] leading-[24px] font-normal",
+        "font-[family-name:var(--font-sora-sans)] text-[18px] leading-[24px] font-normal",
       body2:
-        "font-[family-name:var(--font-sora-sans)] text-[14px] md:text-[18px] l eading-[26px] font-normal",
+        "font-[family-name:var(--font-sora-sans)] text-[16px] md:text-[18px] leading-[26px] font-normal",
       button:
         "font-[family-name:var(--font-sora-sans)] text-[18px] leading-[28px] font-semibold",
       caption: "text-[12px] lg:text-[14px] leading-[100%] font-normal",

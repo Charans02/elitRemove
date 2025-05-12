@@ -8,7 +8,7 @@ const WhyChoose = () => {
       <div className="absolute inset-0 bg-[url(/images/bg.png)] bg-cover bg-center opacity-10" />
       <section className="flex flex-col items-center justify-between gap-10 px-[80px] py-[60px] xl:flex-row">
         <div className="space-y-14 flex-6/11">
-          <Text variant="h2" className="text-center xl:text-left">
+          <Text variant="h2" className="text-center">
             Why Philadelphia
             <br />
             <span className="text-red"> Loves Trash Lion</span>

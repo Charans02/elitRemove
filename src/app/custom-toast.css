@@ -1,0 +1,19 @@
+/* Custom styles for the toast notifications */
+
+/* Hide the empty notifications container */
+section[aria-label="Notifications alt+T"] {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  overflow: visible;
+  z-index: 9999;
+}
+
+/* Make sure toast content is visible when it exists */
+section[aria-label="Notifications alt+T"] > * {
+  visibility: visible;
+  height: auto;
+  width: auto;
+} 
