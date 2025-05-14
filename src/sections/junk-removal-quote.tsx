@@ -34,7 +34,7 @@ const JunkRemovalQuote = () => {
 
     try {
       const data = {
-        to: "hungryAdmiral05@gmail.com",
+        to: process.env.NEXT_PUBLIC_CONTACT_INFO || "",
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
@@ -110,7 +110,7 @@ const JunkRemovalQuote = () => {
           <button
             type="submit"
             disabled={loading}
-            className="xl:leading-[23.14px] 2xl:px-[30px] flex w-full cursor-pointer flex-nowrap items-center justify-center gap-[3.49px] rounded-[17.47px] bg-[#000000] px-[20.61px] py-[18px] text-[16px] leading-[8.08px] font-[700] text-white disabled:opacity-70 md:w-fit md:gap-[4px] md:rounded-[27.68px] md:px-[10px] md:py-[13px] md:text-[14px] md:leading-[12.81px] xl:gap-[6px] xl:rounded-[50px] xl:px-[15px] xl:py-[21px] xl:text-[18px]"
+            className="flex w-full cursor-pointer flex-nowrap items-center justify-center gap-[3.49px] rounded-[17.47px] bg-[#000000] px-[20.61px] py-[18px] text-[16px] leading-[8.08px] font-[700] text-white disabled:opacity-70 md:w-fit md:gap-[4px] md:rounded-[27.68px] md:px-[10px] md:py-[13px] md:text-[14px] md:leading-[12.81px] xl:gap-[6px] xl:rounded-[50px] xl:px-[15px] xl:py-[21px] xl:text-[18px] xl:leading-[23.14px] 2xl:px-[30px]"
           >
             <CircleArrowIcon />
             <span className="text-nowrap">

@@ -19,6 +19,12 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function sendEmail(data: ContactEmailForm) {
   const { name, email, message, phone, to, isQuoteRequest = false } = data;
   
+  // Validate the to email
+  if (!to) {
+    console.error('No recipient email provided');
+    return { success: false, error: { message: 'Recipient email is required' } };
+  }
+  
   try {
     const emailSubject = isQuoteRequest 
       ? 'Junk Removal Quote Request' 
@@ -29,12 +35,14 @@ export async function sendEmail(data: ContactEmailForm) {
       : ContactFormEmail({ name, email, message, phone });
 
     const result = await resend.emails.send({
-      from: 'delivered@resend.dev',
-      to: [to],
+      from: 'Trash Lion <contact@trashlion.com>',
+      to: to,
       subject: emailSubject,
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
       react: emailComponent,
     });
+    
+    console.log('Email sent successfully:', result);
     
     return { success: true, data: result };
   } catch (error) {

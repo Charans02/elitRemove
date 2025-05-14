@@ -84,7 +84,7 @@ const Contact = () => {
 
               try {
                 const data = {
-                  to: "Trash.lion.llc@gmail.com",
+                  to: process.env.NEXT_PUBLIC_CONTACT_INFO || "",
                   name: formData.get("name") as string,
                   email: formData.get("email") as string,
                   phone: formData.get("phone") as string,
