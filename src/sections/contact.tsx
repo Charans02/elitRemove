@@ -110,7 +110,7 @@ const Contact = () => {
               }
             }}
           >
-            <div className="w-full space-y-2">
+            <div className="mb-4 w-full space-y-2">
               <Text className="!text-left uppercase">Full Name</Text>
               <input
                 name="name"
@@ -119,7 +119,7 @@ const Contact = () => {
                 required
               />
             </div>
-            <div className="w-full space-y-2">
+            <div className="mb-4 w-full space-y-2">
               <Text className="!text-left uppercase">Email</Text>
               <input
                 name="email"
@@ -129,7 +129,7 @@ const Contact = () => {
                 required
               />
             </div>
-            <div className="w-full space-y-2">
+            <div className="mb-4 w-full space-y-2">
               <Text className="!text-left uppercase">Phone</Text>
               <input
                 name="phone"
