@@ -18,8 +18,7 @@ const ServiceAreas = () => {
             variant="h2"
             className="mt-8 max-w-[512px] text-center xl:text-left"
           >
-            <span className="text-orange-500">Trusted</span> Junk Removal Experts
-            Serving These Areas!
+            <span className="text-orange-500">Proudly Serving</span>
           </Text>
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
             {SERVICE_AREAS.map((area, idx) => (

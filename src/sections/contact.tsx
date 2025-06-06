@@ -55,8 +55,7 @@ const Contact = () => {
       >
         <div className="z-10 w-full flex-1">
           <Text variant="h2" className="text-center xl:text-left">
-            Want to Hire The Best In {isMediumScreen && <br />} Texas
-            <br />
+            You Name It, We Haul It.
             <span className="text-orange-300 hidden"> Call Elite Removal</span>
           </Text>
           {/* <Image

@@ -32,25 +32,32 @@ export default Services;
 const ServiceCard = ({ s }: { s: ServiceType }) => {
   // Function to format the title with colored parts
   const formatTitle = (title: string) => {
-    if (title === "Property clean outs") {
+    if (title === "General Junk Removal") {
+      return (
+        <>
+          <span className="text-orange-600">General</span>
+          <span> Junk Removal</span>
+        </>
+      );
+    } else if (title === "Property Cleanouts") {
       return (
         <>
           <span className="text-orange-600">Property</span>
-          <span> Clean Outs</span>
+          <span> Cleanouts</span>
         </>
       );
-    } else if (title === "Auto/Boat/RV removal") {
+    } else if (title === "Stump & Yard Debris Removal") {
       return (
         <>
-          <span className="text-orange-600">Auto/Boat/RV</span>
-          <span> Removal</span>
+          <span className="text-orange-600">Stump & Yard</span>
+          <span> Debris Removal</span>
         </>
       );
-    } else if (title === "Trash and Junk Removal") {
+    } else if (title === "Construction & Renovation Debris") {
       return (
         <>
-          <span className="text-orange-600">Trash and Junk</span>
-          <span> Removal</span>
+          <span className="text-orange-600">Construction & Renovation</span>
+          <span> Debris</span>
         </>
       );
     }

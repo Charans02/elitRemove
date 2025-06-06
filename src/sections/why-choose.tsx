@@ -9,9 +9,9 @@ const WhyChoose = () => {
       <section className="flex flex-col items-center justify-between gap-10 px-[80px] py-[60px] xl:flex-row">
         <div className="space-y-14 flex-6/11">
           <Text variant="h2" className="text-center">
-            Why Texas
+            Why Choose
             <br />
-            <span className="text-orange-400"> Loves Elite Removal</span>
+            <span className="text-orange-400"> Elite Removal?</span>
           </Text>
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
             <div className="flex items-center gap-3">
@@ -19,7 +19,7 @@ const WhyChoose = () => {
                 <Check size={32} stroke="white" />
               </div>
               <p className="font-[family-name:var(--font-lato-sans)] text-[22px] leading-[32px] font-semibold">
-                No job to big or small
+                Locally Owned & Operated
               </p>
             </div>
             <div className="flex items-center gap-3">
@@ -27,7 +27,7 @@ const WhyChoose = () => {
                 <Check size={32} stroke="white" />
               </div>
               <p className="font-[family-name:var(--font-lato-sans)] text-[22px] leading-[32px] font-semibold">
-                Fast job completion
+                Available 7 Days a Week — Even Holidays
               </p>
             </div>
             <div className="flex items-center gap-3">
@@ -35,7 +35,7 @@ const WhyChoose = () => {
                 <Check size={32} stroke="white" />
               </div>
               <p className="font-[family-name:var(--font-lato-sans)] text-[22px] leading-[32px] font-semibold">
-                We Are Open 24/7
+                We Haul It All — You Name It, We Haul It
               </p>
             </div>
             <div className="flex items-center gap-3">
@@ -43,7 +43,7 @@ const WhyChoose = () => {
                 <Check size={32} stroke="white" />
               </div>
               <p className="font-[family-name:var(--font-lato-sans)] text-[22px] leading-[32px] font-semibold">
-                Experts in our industry
+                Affordable Rates. Free Quotes. No Hidden Fees
               </p>
             </div>
           </div>

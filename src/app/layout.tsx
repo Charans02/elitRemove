@@ -20,8 +20,8 @@ const soraSans = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Elite Removal | Texas's #1 Top Rated Junk Removal Team",
-  description: "Texas's #1 Top Rated Junk Removal Team",
+  title: "Elite Removal | East Texas's Fast and Reliable Junk Removal Team",
+  description: "East Texas's Fast and Reliable Junk Removal Team",
 };
 
 export default function RootLayout({

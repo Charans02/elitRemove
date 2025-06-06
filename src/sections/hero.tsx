@@ -25,19 +25,19 @@ const Hero = () => {
               className="text-center text-[38px] leading-[50px] sm:text-[28px] sm:leading-[43px] md:text-[34px] md:leading-[43px] lg:text-left xl:text-left xl:text-[55px] xl:leading-[78px]"
             >
               <span className="text-orange-500 font-extrabold">
-                Texas&apos;s
+                East Texas&apos;s
               </span>
               <br />
-              #1 Top Rated Junk <br /> Removal Team
+              Fast & Reliable <br /> Junk Removal Team
             </Text>
             <Text className="text-center text-[16px] leading-[23px] md:text-left md:text-[18px] lg:text-left lg:text-[21px] lg:leading-[26px] xl:text-left">
               <span className="leading-[33px] font-bold">
-                Proudly serving Texas over many years
+                Locally owned. Available 7 days a week.
               </span>
               {/* <br /> */}
               <span className="hidden">From clean outs to residential junk hauling.</span>
               <br />
-              We get it done right the first time.
+              Any weather. Any holiday.
             </Text>
             <div
               className="scrollbar-hide flex w-full max-w-full items-center justify-center md:justify-start gap-1.5 overflow-x-auto py-2 whitespace-nowrap sm:gap-2.5 lg:gap-5 lg:py-3"
@@ -92,7 +92,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center justify-between gap-2">
                 <Text className="text-[18px] leading-[14px] font-semibold md:text-[22px] md:leading-[26px] lg:text-[22px] lg:leading-[26px] xl:text-[28px] xl:leading-[32px]">
-                  10K+
+                  100+
                 </Text>
                 <Text className="text-[13px] leading-[11px] font-extrabold md:text-[15px] md:leading-[20px] lg:text-[15px] lg:leading-[20px] xl:text-[15px] xl:leading-[20px]">
                   Happy Customers

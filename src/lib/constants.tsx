@@ -68,21 +68,27 @@ export const QUICK_LINKS = [
 export const SERVICES: ServiceType[] = [
   {
     image: "/images/service1.jpg",
-    title: "Property clean outs",
+    title: "Stump & Yard Debris Removal",
     description:
-      "If you recently purchased a house or our trying to sell a house or had a tenant recently move out. We are the right guys for the job!",
+      "We don’t just do junk—we do stumps and storm cleanups too.",
   },
   {
     image: "/images/service2.jpg",
-    title: "Auto/Boat/RV removal",
+    title: "Property Cleanouts",
     description:
-      "We are one of the only junk removal companies in Philadelphia who are  able to get your car, boat or rv stuck in your driveway gone today!",
+      "Moving out? Tenant left a mess? Let us handle the heavy lifting.",
   },
   {
     image: "/images/service3.jpg",
-    title: "Trash and Junk Removal",
+    title: "General Junk Removal",
     description:
-      "We remove any trash or junk piling up in your home, garage or any where you need it gone!",
+      "We clear out garages, sheds, storage units, and anywhere else junk piles up.",
+  },
+  {
+    image: "/images/service4.jpg",
+    title: "Construction & Renovation Debris",
+    description:
+      "We help contractors and homeowners keep their job sites clean.",
   },
 ];
 
