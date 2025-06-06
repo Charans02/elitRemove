@@ -14,7 +14,7 @@ const Services = () => {
           variant="h2"
           className="max-w-[768px] text-center xl:max-w-[1146px]"
         >
-          We <span className="text-red">remove any unwanted junk</span> you have
+          We <span className="text-orange-500">remove any unwanted junk</span> you have
           laying around and need gone!
         </Text>
         <div className="mt-8 flex flex-col justify-between gap-8 lg:mt-16 xl:flex-row">
@@ -35,21 +35,21 @@ const ServiceCard = ({ s }: { s: ServiceType }) => {
     if (title === "Property clean outs") {
       return (
         <>
-          <span className="text-red">Property</span>
+          <span className="text-orange-600">Property</span>
           <span> Clean Outs</span>
         </>
       );
     } else if (title === "Auto/Boat/RV removal") {
       return (
         <>
-          <span className="text-red">Auto/Boat/RV</span>
+          <span className="text-orange-600">Auto/Boat/RV</span>
           <span> Removal</span>
         </>
       );
     } else if (title === "Trash and Junk Removal") {
       return (
         <>
-          <span className="text-red">Trash and Junk</span>
+          <span className="text-orange-600">Trash and Junk</span>
           <span> Removal</span>
         </>
       );

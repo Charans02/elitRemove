@@ -10,16 +10,16 @@ const Story = () => {
       className="flex flex-col items-center px-[80px] py-[60px]"
     >
       <Text variant="h2">
-        <span className="text-red">Our</span> Story!
+        <span className="text-orange-600">Our</span> Story!
       </Text>
       <Text className="mt-8 hidden max-w-[702px] text-center text-[#525252]">
-        For 10 + years Trash Lion has been dedicated to keeping Philadelphia a
+        For 10 + years Elite Removal has been dedicated to keeping Texas a
         cleaner place for both you and those around you
       </Text>
       <div className="mt-8 xl:mt-15 flex w-full max-w-[768px] flex-col items-center gap-8 md:gap-20 xl:max-w-full xl:flex-row xl:gap-30">
         <div className="relative mx-auto min-h-[393px] w-full xl:max-w-[550px] overflow-hidden rounded-2xl bg-white shadow">
           <Image
-            src="/images/company_logo.jpg"
+            src="/images/company_logo.png"
             alt=""
             fill
             className="object-contain"
@@ -27,19 +27,19 @@ const Story = () => {
         </div>
         <div className="flex w-full flex-col items-center gap-8">
           <p className="text-center font-[family-name:var(--font-sora-sans)] text-[28px] leading-[44px] font-normal uppercase lg:text-left">
-            <span className="text-red font-extrabold">Trash lions, </span>
-            promise to Philadelphia
+            <span className="text-orange-500 font-extrabold">Elite Removal, </span>
+            promise to Texas
           </p>
           <p className="text-center font-[family-name:var(--font-lato-sans)] text-[18px] leading-[34px] font-normal lg:text-left">
-            <span className="font-bold text-[#d80027]">
-              Keeping Your Home And Philadelphia A Cleaner Place.
+            <span className="font-bold text-orange-500">
+              Keeping Your Home And Texas A Cleaner Place.
             </span>
             <br />
             <br />
             <span>
               We are always here when you need unwanted junk gone. We aim to
               make the process easy for you and to treat you like a part of the
-              trash lion family every step of the way.
+              Elite Removal family every step of the way.
             </span>
             <div className="mx-auto flex flex-row items-center justify-center gap-2 py-5">
               {JUNK_REMOVAL_IMAGES.map((item) => (
@@ -59,12 +59,12 @@ const Story = () => {
               need removed from your home or business we are here for you,
             </span>
           </p>
-          <button className="group bg-red hover:text-red flex h-[54px] w-full max-w-[348px] cursor-pointer items-center justify-center gap-2.5 rounded-full px-8 py-4 text-white transition-colors hover:bg-[#f3f3f3]">
+          <button className="group bg-orange-400 hover:text-orange-400 flex h-[54px] w-full max-w-[348px] cursor-pointer items-center justify-center gap-2.5 rounded-full px-8 py-4 text-white transition-colors hover:bg-[#f3f3f3]">
             <div className="relative">
               <MessageCircle size={24} />
               <Phone
                 size={10}
-                className="group-hover:fill-red absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-white"
+                className="group-hover:fill-orange-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fill-white"
               />
             </div>
             <p className="font-[family-name:var(--font-sora-sans)] text-[16px] leading-[100%] font-semibold uppercase">

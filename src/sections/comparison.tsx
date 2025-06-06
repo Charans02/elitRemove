@@ -15,20 +15,20 @@ import { useState, useEffect } from "react";
 const comparisonSets = [
   {
     id: 1,
-    before: "/images/before.png",
-    after: "/images/after.png",
+    before: "/images/before.jpg",
+    after: "/images/after.jpg",
     title: "Backyard Cleanup",
   },
   {
     id: 2,
-    before: "/images/before.png",
-    after: "/images/after.png",
+    before: "/images/before.jpg",
+    after: "/images/after.jpg",
     title: "Garage Cleanup",
   },
   {
     id: 3,
-    before: "/images/before.png",
-    after: "/images/after.png",
+    before: "/images/before.jpg",
+    after: "/images/after.jpg",
     title: "Backyard Cleanup",
   },
 ];
@@ -37,8 +37,8 @@ const comparisonSets = [
 const Comparison = () => {
   // Single static image data
   const staticComparison = {
-    before: "/images/before.png",
-    after: "/images/after.png",
+    before: "/images/before.jpg",
+    after: "/images/after.jpg",
     title: "Backyard Cleanup",
   };
 
@@ -110,10 +110,10 @@ const Comparison = () => {
                 </Text>
                 <p className="mt-4 hidden text-center font-[family-name:var(--font-sora-sans)] text-[25px] leading-[30px] font-semibold text-white/70 sm:block">
                   <span className="font-extrabold">
-                    No job is to big for the lions
+                    Elite Removal: Big or small, 
                   </span>
                   {"  "}
-                  we eat your junk for breakfast.
+                  your junk is our mission.
                 </p>
               </div>
 
@@ -149,11 +149,11 @@ const Comparison = () => {
                     handle={
                       <ReactCompareSliderHandle
                         buttonStyle={{
-                          backgroundColor: "red",
+                          backgroundColor: "orange",
                         }}
                         linesStyle={{
                           width: lineWidth,
-                          background: "red",
+                          background: "orange",
                         }}
                       />
                     }
@@ -194,7 +194,7 @@ const Comparison = () => {
                           loading="eager"
                           draggable={false}
                         />
-                        <div className="bg-red absolute top-4 right-4 rounded-full px-3 py-1 text-sm text-white">
+                        <div className="bg-orange-600 absolute top-4 right-4 rounded-full px-3 py-1 text-sm text-white">
                           After
                         </div>
                       </div>

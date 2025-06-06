@@ -24,15 +24,15 @@ const Hero = () => {
               variant="h1"
               className="text-center text-[38px] leading-[50px] sm:text-[28px] sm:leading-[43px] md:text-[34px] md:leading-[43px] lg:text-left xl:text-left xl:text-[55px] xl:leading-[78px]"
             >
-              <span className="text-red font-extrabold">
-                Philadelphia&apos;s
+              <span className="text-orange-500 font-extrabold">
+                Texas&apos;s
               </span>
               <br />
               #1 Top Rated Junk <br /> Removal Team
             </Text>
             <Text className="text-center text-[16px] leading-[23px] md:text-left md:text-[18px] lg:text-left lg:text-[21px] lg:leading-[26px] xl:text-left">
               <span className="leading-[33px] font-bold">
-                Proudly serving Philadelphia for 10 years
+                Proudly serving Texas over many years
               </span>
               {/* <br /> */}
               <span className="hidden">From clean outs to residential junk hauling.</span>

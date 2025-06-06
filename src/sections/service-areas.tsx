@@ -29,7 +29,7 @@ const ServiceAreas = () => {
                   variant="body2"
                   className="text-foreground font-bold max-w-full text-[16px] md:text-[20px] md:max-w-[360px] xl:max-w-[212px]"
                 >
-                  {area}, PA
+                  {area}, TX
                 </Text>
               </div>
             ))}

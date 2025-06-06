@@ -12,7 +12,7 @@ const Footer = () => {
           <section className="flex !max-w-[640px] flex-col-reverse items-center justify-between gap-16 lg:!max-w-[860px] xl:!max-w-[1512px] xl:flex-row xl:items-start">
             <div className="flex flex-col items-center xl:w-2/5 xl:items-start">
               <Text variant="h4">
-                Trash<span className="text-red"> Lion</span>
+                Elite<span className="text-orange-600"> Removal</span>
               </Text>
               <Text className="mt-4">
                 We take on jobs ranging from, junk removal, house/yard clean
@@ -66,7 +66,7 @@ const Footer = () => {
                   className="w-full rounded-l-2xl rounded-r-2xl bg-white/10 px-6 py-5 font-[family-name:var(--font-sora-sans)] text-[16px] leading-[24px] backdrop-blur-md transition-colors focus:bg-white/20 focus:outline-none sm:rounded-r-none"
                   placeholder="Enter your email"
                 />
-                <button className="bg-red hover:text-red btn-shadow cursor-pointer rounded-l-2xl rounded-r-2xl px-6 py-[18px] transition-colors hover:bg-white sm:rounded-l-none">
+                <button className="bg-orange-500 hover:text-red btn-shadow cursor-pointer rounded-l-2xl rounded-r-2xl px-6 py-[18px] transition-colors hover:bg-white sm:rounded-l-none">
                   <Text variant="button">Subscribe</Text>
                 </button>
               </div>

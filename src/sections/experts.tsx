@@ -46,7 +46,7 @@ const Experts = () => {
                   className="max-w-[517px] text-center xl:text-left"
                 >
                   See Our Junk Removal
-                  <span className="text-red"> Experts </span>
+                  <span className="text-orange-400"> Experts </span>
                   At Work!
                 </Text>
               </div>
@@ -63,7 +63,7 @@ const Experts = () => {
                   <Image
                     src={
                       EXPERT_IMAGES[0].img_group[0]?.img_url ||
-                      "/images/image.png"
+                      "/images/image.jpg"
                     }
                     alt={EXPERT_IMAGES[0].img_group[0]?.img_name || ""}
                     fill
@@ -81,7 +81,7 @@ const Experts = () => {
                   <Image
                     src={
                       EXPERT_IMAGES[0].img_group[0]?.img_url ||
-                      "/images/image.png"
+                      "/images/image.jpg"
                     }
                     alt={EXPERT_IMAGES[0].img_group[0]?.img_name || ""}
                     fill
@@ -92,7 +92,7 @@ const Experts = () => {
                   <Image
                     src={
                       EXPERT_IMAGES[0].img_group[1]?.img_url ||
-                      "/images/image.png"
+                      "/images/image.jpg"
                     }
                     alt={EXPERT_IMAGES[0].img_group[1]?.img_name || ""}
                     fill
@@ -106,7 +106,7 @@ const Experts = () => {
                   <Image
                     src={
                       EXPERT_IMAGES[0].img_group[2]?.img_url ||
-                      "/images/image.png"
+                      "/images/image.jpg"
                     }
                     alt={EXPERT_IMAGES[0].img_group[2]?.img_name || ""}
                     fill
@@ -117,7 +117,7 @@ const Experts = () => {
                   <Image
                     src={
                       EXPERT_IMAGES[0].img_group[3]?.img_url ||
-                      "/images/image.png"
+                      "/images/image.jpg"
                     }
                     alt={EXPERT_IMAGES[0].img_group[3]?.img_name || ""}
                     fill
@@ -128,7 +128,7 @@ const Experts = () => {
                   <Image
                     src={
                       EXPERT_IMAGES[0].img_group[4]?.img_url ||
-                      "/images/image.png"
+                      "/images/image.jpg"
                     }
                     alt={EXPERT_IMAGES[0].img_group[4]?.img_name || ""}
                     fill
@@ -153,7 +153,7 @@ const Experts = () => {
                         <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
                           <Image
                             src={
-                              group.img_group[0]?.img_url || "/images/image.png"
+                              group.img_group[0]?.img_url || "/images/image.jpg"
                             }
                             alt={group.img_group[0]?.img_name || ""}
                             fill
@@ -163,7 +163,7 @@ const Experts = () => {
                         <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
                           <Image
                             src={
-                              group.img_group[1]?.img_url || "/images/image.png"
+                              group.img_group[1]?.img_url || "/images/image.jpg"
                             }
                             alt={group.img_group[1]?.img_name || ""}
                             fill
@@ -176,7 +176,7 @@ const Experts = () => {
                         <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
                           <Image
                             src={
-                              group.img_group[2]?.img_url || "/images/image.png"
+                              group.img_group[2]?.img_url || "/images/image.jpg"
                             }
                             alt={group.img_group[2]?.img_name || ""}
                             fill
@@ -186,7 +186,7 @@ const Experts = () => {
                         <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
                           <Image
                             src={
-                              group.img_group[3]?.img_url || "/images/image.png"
+                              group.img_group[3]?.img_url || "/images/image.jpg"
                             }
                             alt={group.img_group[3]?.img_name || ""}
                             fill
@@ -196,7 +196,7 @@ const Experts = () => {
                         <div className="relative aspect-video w-full max-w-[768px] overflow-hidden rounded-lg">
                           <Image
                             src={
-                              group.img_group[4]?.img_url || "/images/image.png"
+                              group.img_group[4]?.img_url || "/images/image.jpg"
                             }
                             alt={group.img_group[4]?.img_name || ""}
                             fill

@@ -11,29 +11,24 @@ import { ServiceType, TestimonialType, Expert, ComparisonSet, JunkRemovalType, C
 
 export const CONTACT_INFO = [
   {
-    name: "Email",
-    icon: <Mail size={16} className="stroke-foreground fill-background" />,
-    value: "Trash.lion.llc@gmail.com",
-  },
-  {
     name: "Address",
 
     icon: <MapPin size={16} className="stroke-foreground fill-background" />,
-    value: "Philadelphia , Pa",
+    value: "Tyler, TX, United States, Texas 75702",
   },
   {
     name: "Phone",
     icon: <Phone size={16} className="stroke-foreground fill-background" />,
-    value: "267-356-1542",
+    value: "903-714-0271",
   },
 ];
 
 export const SOCIAL_LINKS = [
-  {
-    name: "Instagram",
-    icon: <Instagram size={24} />,
-    url: "/",
-  },
+  // {
+  //   name: "Instagram",
+  //   icon: <Instagram size={24} />,
+  //   url: "/",
+  // },
   // {
   //   name: "Twitter",
   //   icon: <Twitter size={24} />,
@@ -42,7 +37,7 @@ export const SOCIAL_LINKS = [
   {
     name: "Facebook",
     icon: <Facebook size={24} />,
-    url: "/",
+    url: "https://www.facebook.com/profile.php?id=61571069666198",
   },
   // {
   //   name: "Youtube",
@@ -72,19 +67,19 @@ export const QUICK_LINKS = [
 
 export const SERVICES: ServiceType[] = [
   {
-    image: "/images/service_1.png",
+    image: "/images/service1.jpg",
     title: "Property clean outs",
     description:
       "If you recently purchased a house or our trying to sell a house or had a tenant recently move out. We are the right guys for the job!",
   },
   {
-    image: "/images/service_2.png",
+    image: "/images/service2.jpg",
     title: "Auto/Boat/RV removal",
     description:
       "We are one of the only junk removal companies in Philadelphia who are  able to get your car, boat or rv stuck in your driveway gone today!",
   },
   {
-    image: "/images/service_3.png",
+    image: "/images/service3.jpg",
     title: "Trash and Junk Removal",
     description:
       "We remove any trash or junk piling up in your home, garage or any where you need it gone!",
@@ -93,49 +88,37 @@ export const SERVICES: ServiceType[] = [
 
 export const TESTIMONIALS: TestimonialType[] = [
   {
-    avatar: "/images/avatar_1.png",
-    name: "Pedro Beatty",
+    avatar: "/images/avatar.png",
+    name: "Mari T.",
     content:
-      "Needed appliances removed out of a property I had, (refrigerator, oven, washer and, dryer). Trash Lion came out had them removed quickly. Will definitely use them again and refer to my friends that need junk removed.",
+      "Super services, great guys! Quality work, excellent follow up and communication. I highly recommend them!",
     rating: 5,
   },
   {
-    avatar: "/images/avatar_2.png",
-    name: "Justin Gerhold Jr.",
+    avatar: "/images/avatar.png",
+    name: "Joseph N.",
     content:
-      "My tenant moved out of my property, needed to get all the old furniture out of the apartment. Trash Lion had it done in a day.",
+      "Awesome experience. Same day service on a Saturday. The price was extremely fair. The two gentlemen that did the removal work were pleasant and very professional. Great attitudes actually. I will certainly be holding on to their number.",
     rating: 5,
   },
   {
-    avatar: "/images/avatar_3.png",
-    name: "Rufus Mohr",
+    avatar: "/images/avatar.png",
+    name: "Blanca Baldillez Simmons",
     content:
-      "Had a very easy time working with him. I needed my garage cleaned out before the holidays. The owner came out on the weekend, got it all done in a timely manner and left my garage looking great.",
+      "They were quick to respond and within a few hours they were at my house and got the job done. Very nice and respectful young men. Highly recommend",
     rating: 5,
   },
 ];
 
 export const SERVICE_AREAS = [
-  "Horsham",
-  "Bryn Athyn",
-  "Willow Grove",
-  "Heaton",
-  "Hatboro",
-  "Newtown",
-  "Woodmont",
-  "Willow Manor",
-  "Warminster Heights",
-  "Bensalem, Bensalem Township",
-  "Levittown",
-  "Norristown",
-  "Philadelphia",
-  "Ivyland",
-  "Alnwick",
-  "Westbury",
-  "Warrington",
-  "Abington Township",
-  "Huntington Valley, Bryn Athyn",
-  "Southampton, Upper Southampton Township",
+  "Flint",
+  "Tyler",
+  "Liberty City",
+  "Crockett",
+  "Chandler",
+  "Jacksonville",
+  "Wills Point",
+  "Nacogdoches",
 ];
 
 export const EXPERT_IMAGES: Expert[] = [
@@ -144,7 +127,7 @@ export const EXPERT_IMAGES: Expert[] = [
     img_group: [
       {
         id: 1,
-        img_url: "/images/image.png",
+        img_url: "/images/image.jpg",
         img_name: "Expert 1",
       },
       {
@@ -174,7 +157,7 @@ export const EXPERT_IMAGES: Expert[] = [
     img_group: [
       {
         id: 1,
-        img_url: "/images/image.png",
+        img_url: "/images/image.jpg",
         img_name: "Expert 1",
       },
       {
@@ -204,7 +187,7 @@ export const EXPERT_IMAGES: Expert[] = [
     img_group: [
       {
         id: 1,
-        img_url: "/images/image.png",
+        img_url: "/images/image.jpg",
         img_name: "Expert 1",
       },
       {

@@ -39,7 +39,7 @@ const Contact = () => {
   );
 
   const locations = [
-    { name: "Philadelphia", latitude: 39.9526, longitude: -75.1652 },
+    { name: "Texas", latitude: 32.349998, longitude: -95.300003 },
   ];
 
   const markers: LatLngTuple[] = locations.map((location) => [
@@ -55,9 +55,9 @@ const Contact = () => {
       >
         <div className="z-10 w-full flex-1">
           <Text variant="h2" className="text-center xl:text-left">
-            Want to Hire The Best In {isMediumScreen && <br />} Philadelphia
+            Want to Hire The Best In {isMediumScreen && <br />} Texas
             <br />
-            <span className="text-red hidden"> Call Trash Lion</span>
+            <span className="text-red hidden"> Call Elite Removal</span>
           </Text>
           {/* <Image
             src="/images/map.png"
@@ -67,12 +67,12 @@ const Contact = () => {
             className="border-red mt-8 w-full rounded-md border shadow sm:rounded-lg xl:rounded-xl"
           /> */}
           <div className="border-red mx-auto mt-8 h-[500px] overflow-hidden rounded-md border shadow sm:rounded-lg xl:rounded-xl">
-            <Map posix={[39.9526, -75.1652]} markers={markers} />
+            <Map posix={[32.349998, -95.300003]} markers={markers} />
           </div>
         </div>
         <div className="flex w-full flex-1 flex-col items-center gap-4 rounded-2xl bg-white p-8 shadow">
-          <p className="text-red mb-8 text-center font-[family-name:var(--font-sora-sans)] text-[40px] leading-[40px] font-semibold xl:text-left">
-            Reach out to Trash Lion!
+          <p className="text-orange-600 mb-8 text-center font-[family-name:var(--font-sora-sans)] text-[40px] leading-[40px] font-semibold xl:text-left">
+            Reach out to Elite Removal!
           </p>
           <form
             className="w-full"
@@ -125,7 +125,7 @@ const Contact = () => {
                 name="email"
                 type="email"
                 className="focus:outline-red w-full rounded-2xl border-[2px] border-[#989898] p-4 font-[family-name:var(--font-lato-sans)]"
-                placeholder="Ryan@trashlion.com"
+                placeholder="Ryan@eliteremoval.com"
                 required
               />
             </div>
@@ -134,7 +134,7 @@ const Contact = () => {
               <input
                 name="phone"
                 className="focus:outline-red w-full rounded-2xl border-[2px] border-[#989898] p-4 font-[family-name:var(--font-lato-sans)]"
-                placeholder="738-655-4789"
+                placeholder="903-714-0271"
                 required
               />
             </div>
@@ -150,7 +150,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
-              className="bg-red mt-8 flex w-full cursor-pointer items-center justify-center gap-3 rounded-2xl px-6 py-5 text-white disabled:opacity-70"
+              className="bg-orange-500 mt-8 flex w-full cursor-pointer items-center justify-center gap-3 rounded-2xl px-6 py-5 text-white disabled:opacity-70"
             >
               <CircleChevronRight size={20} />
               <Text variant="button">
