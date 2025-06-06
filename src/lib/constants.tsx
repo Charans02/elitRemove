@@ -1,9 +1,9 @@
 import {
   Facebook,
-  Instagram,
+  // Instagram,
   // Twitter,
   // Youtube,
-  Mail,
+  // Mail,
   MapPin,
   Phone,
 } from "lucide-react";
