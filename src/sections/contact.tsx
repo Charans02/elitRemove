@@ -57,7 +57,7 @@ const Contact = () => {
           <Text variant="h2" className="text-center xl:text-left">
             Want to Hire The Best In {isMediumScreen && <br />} Texas
             <br />
-            <span className="text-red hidden"> Call Elite Removal</span>
+            <span className="text-orange-300 hidden"> Call Elite Removal</span>
           </Text>
           {/* <Image
             src="/images/map.png"
@@ -66,7 +66,7 @@ const Contact = () => {
             height={349}
             className="border-red mt-8 w-full rounded-md border shadow sm:rounded-lg xl:rounded-xl"
           /> */}
-          <div className="border-red mx-auto mt-8 h-[500px] overflow-hidden rounded-md border shadow sm:rounded-lg xl:rounded-xl">
+          <div className="border-orange-400 mx-auto mt-8 h-[500px] overflow-hidden rounded-md border shadow sm:rounded-lg xl:rounded-xl">
             <Map posix={[32.349998, -95.300003]} markers={markers} />
           </div>
         </div>
