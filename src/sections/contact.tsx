@@ -73,6 +73,7 @@ const Contact = () => {
           <p className="text-orange-600 mb-8 text-center font-[family-name:var(--font-sora-sans)] text-[40px] leading-[40px] font-semibold xl:text-left">
             Reach out to Elite Removal!
           </p>
+          {isMediumScreen && <div className="hidden" />}
           <form
             className="w-full"
             onSubmit={async (e) => {
