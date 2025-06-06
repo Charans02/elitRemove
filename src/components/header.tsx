@@ -63,7 +63,7 @@ const Header = () => {
         <div className="mx-auto flex max-w-[1512px] flex-row-reverse items-center justify-between gap-1.5 px-[20px] py-3 md:grid md:grid-cols-3 md:px-[35px] lg:grid lg:h-[92px] lg:grid-cols-3 lg:px-[60px] lg:py-1 xl:flex xl:h-fit xl:flex-row xl:py-4 2xl:grid 2xl:grid-cols-3 2xl:items-center 2xl:px-[60px]">
           <div className="hidden gap-12 xl:flex 2xl:justify-self-start">
             <Link href="#story" onClick={(e) => handleNavClick(e, "story")}>
-              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] leading-[100%] font-normal transition-all hover:underline xl:text-[18px] 2xl:text-[20px]">
+              <p className="hover:text-orange-500 font-[family-name:var(--font-sora-sans)] leading-[100%] font-normal transition-all hover:underline xl:text-[18px] 2xl:text-[20px]">
                 About
               </p>
             </Link>
@@ -71,7 +71,7 @@ const Header = () => {
               href="#testimonials"
               onClick={(e) => handleNavClick(e, "testimonials")}
             >
-              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] leading-[100%] font-normal transition-all hover:underline xl:text-[18px] 2xl:text-[20px]">
+              <p className="hover:text-orange-500 font-[family-name:var(--font-sora-sans)] leading-[100%] font-normal transition-all hover:underline xl:text-[18px] 2xl:text-[20px]">
                 Reviews
               </p>
             </Link>
@@ -79,7 +79,7 @@ const Header = () => {
               href="#services"
               onClick={(e) => handleNavClick(e, "services")}
             >
-              <p className="hover:text-red font-[family-name:var(--font-sora-sans)] leading-[100%] font-normal transition-all hover:underline xl:text-[18px] 2xl:text-[20px]">
+              <p className="hover:text-orange-500 font-[family-name:var(--font-sora-sans)] leading-[100%] font-normal transition-all hover:underline xl:text-[18px] 2xl:text-[20px]">
                 Services
               </p>
             </Link>

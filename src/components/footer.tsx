@@ -25,7 +25,7 @@ const Footer = () => {
                     key={link.name}
                     href={link.url}
                     target="_blank"
-                    className="bg-foreground border-background hover:border-red hover:bg-red flex size-10 items-center justify-center rounded-lg border transition-colors"
+                    className="bg-foreground border-background hover:border-red hover:bg-orange-500 flex size-10 items-center justify-center rounded-lg border transition-colors"
                   >
                     {link.icon}
                   </Link>
@@ -40,7 +40,7 @@ const Footer = () => {
                 <div className="flex flex-col gap-4">
                   {QUICK_LINKS.map((link) => (
                     <Link key={link.name} href={link.url}>
-                      <Text className="hover:text-red transition-colors">
+                      <Text className="hover:text-orange-500 transition-colors">
                         {link.name}
                       </Text>
                     </Link>
